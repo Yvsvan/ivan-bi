@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       EDITA AQUÍ: título y descripción del sitio
+       ═══════════════════════════════════════════════════════════ -->
+  <title>[NOMBRE DEL SITIO] — Inteligencia de Negocios con Power BI</title>
+  <meta name="description" content="Implementamos Power BI en su empresa. De la intuición a la inteligencia — en 12 semanas.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FAVICON: reemplaza con tu propio favicon
+       ═══════════════════════════════════════════════════════════ -->
+  <!-- <link rel="icon" type="image/png" href="assets/favicon.png"> -->
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     NAVBAR
+     ══════════════════════════════════════════════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="Menú principal">
+  <div class="nav-inner">
+
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo" aria-label="Logo">
+        <!-- ═══ EDITA: reemplaza las iniciales o agrega tu logo ═══
+             Para logo: <img src="assets/logo.png" alt="Logo [Empresa]">
+             ═══════════════════════════════════════════════════════ -->
+        BI
+      </div>
+      <span class="nav-name">
+        <!-- ═══ EDITA: nombre de tu sitio/empresa ═══ -->
+        Iván Aguilera<span>.</span>
+      </span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="notebooks.html">Notebooks</a></li>
+      <li><a href="nosotros.html">Quiénes Somos</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contáctanos →</a></li>
+    </ul>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-inner">
+
+    <div class="hero-badge">Consultoría Power BI</div>
+
+    <h1 class="hero-title" id="hero-title">
+      De la Intuición<br>
+      a la <em>Inteligencia</em>
+    </h1>
+
+    <p class="hero-subtitle">
+      Lo que su empresa pierde cada mes sin datos en tiempo real.
+    </p>
+
+    <div class="hero-cta-group">
+      <a href="contacto.html" class="btn btn-primary btn-lg">
+        Agendar Diagnóstico Gratuito →
+      </a>
+      <a href="#metodologia" class="btn btn-outline btn-lg">
+        Ver la Metodología
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">23×</div>
+        <div class="stat-lbl">más probabilidades de<br>adquirir nuevos clientes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12 sem</div>
+        <div class="stat-lbl">de implementación<br>completa</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6-18m</div>
+        <div class="stat-lbl">tiempo de recuperación<br>de inversión</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CIFRAS REALES
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section-dark" aria-labelledby="cifras-title">
+  <div class="section-inner">
+    <p class="section-tag">El Costo del Status Quo</p>
+    <h2 class="section-title light" id="cifras-title">Cifras que cambian la conversación</h2>
+    <p class="section-lead light">Tres estudios globales. Tres razones para actuar hoy.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="num">23×</div>
+        <div class="lbl">Más probabilidades de adquirir nuevos clientes en organizaciones data-driven.</div>
+        <div class="src">McKinsey Global Institute — Analytics Comes of Age</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="num">58%</div>
+        <div class="lbl">Más propensas a alcanzar sus metas de ingresos frente a empresas sin datos.</div>
+        <div class="src">Forrester Consulting / Collibra — 900 líderes encuestados</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="num">+8%</div>
+        <div class="lbl">De ganancias y −10% en costos operativos en empresas con analytics activo.</div>
+        <div class="src">BARC Research — Big Data Analytics Survey</div>
+      </div>
+    </div>
+
+    <div class="chart-simple reveal">
+      <div class="chart-title">Probabilidad de superar metas de ingresos (%)</div>
+      <div class="chart-bars">
+        <div class="bar-wrap">
+          <div class="bar bar-data" data-h="93px" style="height:0">
+            <span class="val">77%</span>
+          </div>
+          <div class="bar-lbl">Empresas<br>Data-Driven</div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar bar-traditional" data-h="55px" style="height:0">
+            <span class="val">45%</span>
+          </div>
+          <div class="bar-lbl">Empresas<br>Tradicionales</div>
+        </div>
+      </div>
+      <p style="font-size:.75rem;color:rgba(255,255,255,.3);margin-top:1rem">
+        Fuente: Harvard Business Review para Google Cloud, 2023 (366 ejecutivos)
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PREGUNTA DISRUPTIVA
+     ══════════════════════════════════════════════════════════════ -->
+<div class="section-disruptive" aria-labelledby="disruptive-q">
+  <div class="disruptive-q">Una pregunta, antes de continuar:</div>
+  <h2 class="disruptive-title" id="disruptive-q">
+    ¿Cuánto tiempo tarda su equipo<br>
+    en tener el número exacto?
+  </h2>
+  <div class="disruptive-answer">
+    Si la respuesta es más de 10 segundos — sigamos.
+  </div>
+  <p style="margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.35);font-style:italic">
+    Esa brecha tiene un costo real y cuantificable.
+  </p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     LA BRECHA (91% vs 57%)
+     ══════════════════════════════════════════════════════════════ -->
+<section aria-labelledby="brecha-title">
+  <div class="section-inner">
+    <p class="section-tag">Intención vs Realidad</p>
+    <h2 class="section-title" id="brecha-title">La brecha más costosa</h2>
+
+    <div class="two-col" style="gap:1.25rem">
+      <div class="gap-card gap-left reveal">
+        <div class="gap-card-num">91%</div>
+        <div class="gap-card-lbl">
+          de las empresas cree que tomar decisiones basadas en datos es crítico para su éxito.
+        </div>
+        <div class="gap-card-src">Data-Driven Decision Making Statistics 2025</div>
+        <div style="margin-top:1.5rem;background:rgba(0,0,0,.2);border-radius:8px;padding:1rem;text-align:left">
+          <span style="color:#2ECC71;font-weight:700">✓ Saben que es crítico.</span><br>
+          <span style="font-size:.85rem;color:rgba(255,255,255,.6)">Pero no tienen las herramientas para hacerlo.</span>
+        </div>
+      </div>
+      <div class="gap-card gap-right reveal reveal-delay-1">
+        <div class="gap-card-num">57%</div>
+        <div class="gap-card-lbl">
+          realmente toma decisiones basadas en datos en la práctica cotidiana.
+        </div>
+        <div class="gap-card-src">Mismo estudio — mismo año</div>
+        <div style="margin-top:1.5rem;background:rgba(0,0,0,.2);border-radius:8px;padding:1rem;text-align:left;border:1px solid rgba(192,57,43,.3)">
+          <span style="color:#E74C3C;font-weight:700">34 puntos de brecha</span><br>
+          <span style="font-size:.85rem;color:rgba(255,255,255,.6)">entre intención y realidad.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CALCULADORA DE COSTO
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section-navy" aria-labelledby="costo-title">
+  <div class="section-inner">
+    <p class="section-tag">El Costo Operacional</p>
+    <h2 class="section-title light" id="costo-title">El costo que nadie calcula</h2>
+
+    <div class="two-col-lg two-col reveal">
+      <div>
+        <p style="color:rgba(255,255,255,.7);margin-bottom:1.25rem;font-weight:600">La fórmula del costo real:</p>
+        <table style="width:100%;border-collapse:collapse">
+          <tbody id="calc-rows"></tbody>
+        </table>
+        <div style="background:#0A1929;border-radius:8px;padding:1.5rem;margin-top:.75rem">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#F2A900">
+            = $1,920 USD / mes
+          </div>
+          <div style="font-size:.85rem;color:rgba(255,255,255,.5);margin-top:.25rem">
+            solo en preparación manual de reportes
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="background:#7B2D00;border-radius:12px;padding:1.5rem">
+          <div style="font-size:.8rem;font-weight:700;color:#FAD98A;margin-bottom:.5rem">ANUALIZADO</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#E74C3C;line-height:1">$23,040</div>
+          <div style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:.5rem">en tiempo que Power BI elimina casi por completo.</div>
+        </div>
+        <div style="background:rgba(0,0,0,.2);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,.08)">
+          <div style="font-size:.85rem;font-weight:700;color:#F2A900;margin-bottom:.75rem">Costos invisibles:</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem">
+            <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem"><span style="color:#E74C3C;flex-shrink:0">●</span>Decisiones tomadas con datos de hace 30 días</li>
+            <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem"><span style="color:#E74C3C;flex-shrink:0">●</span>Juntas donde cada área tiene "su versión" de los números</li>
+            <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem"><span style="color:#E74C3C;flex-shrink:0">●</span>Proyectos no detectados a tiempo por falta de visibilidad</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ANTES VS DESPUÉS
+     ══════════════════════════════════════════════════════════════ -->
+<section aria-labelledby="ba-title">
+  <div class="section-inner">
+    <p class="section-tag">Cómo Cambia el Trabajo</p>
+    <h2 class="section-title" id="ba-title">Antes vs. Después con Power BI</h2>
+
+    <div class="ba-header reveal">
+      <div class="ba-header-before">ANTES</div>
+      <div class="ba-header-vs">VS</div>
+      <div class="ba-header-after">DESPUÉS</div>
+    </div>
+
+    <div id="ba-rows"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     METODOLOGÍA (4 fases)
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section-dark" id="metodologia" aria-labelledby="meto-title">
+  <div class="section-inner">
+    <p class="section-tag">La Solución</p>
+    <h2 class="section-title light" id="meto-title">
+      No instalamos un software.<br>Implementamos un sistema de inteligencia.
+    </h2>
+
+    <div class="two-col">
+      <div class="phases reveal">
+        <div class="phase-item">
+          <div class="phase-num">01</div>
+          <div>
+            <div class="phase-title">Diagnóstico</div>
+            <div class="phase-desc">Inventario de fuentes, KPIs y wireframes aprobados por su equipo.</div>
+          </div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-num">02</div>
+          <div>
+            <div class="phase-title">Arquitectura de Datos</div>
+            <div class="phase-desc">Modelo estrella, medidas DAX y validación de calidad de datos.</div>
+          </div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-num">03</div>
+          <div>
+            <div class="phase-title">Desarrollo Iterativo</div>
+            <div class="phase-desc">Dashboards Alpha → Beta → v1.0 con revisiones de avance semanales.</div>
+          </div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-num">04</div>
+          <div>
+            <div class="phase-title">Capacitación y Soporte</div>
+            <div class="phase-desc">3 tracks (Ejecutivos · Analistas · TI) + 4 semanas de soporte post-entrega.</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div style="background:var(--brand-mid);border-radius:16px;padding:2rem;border:1px solid rgba(242,169,0,.15)">
+          <div style="font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#F2A900;margin-bottom:1rem">CASOS DE USO</div>
+          <div class="cases">
+            <div class="case-item">
+              <div class="case-tag">Retail / E-commerce</div>
+              <div class="case-desc">Detección de quiebres de inventario en tiempo real → +23% en ventas del trimestre.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-tag">Manufactura</div>
+              <div class="case-desc">Identificación de ineficiencias operativas invisibles → hasta +60% en margen operativo.</div>
+            </div>
+            <div class="case-item">
+              <div class="case-tag">Servicios / SaaS</div>
+              <div class="case-desc">Detección de patrones de cancelación con 60 días de anticipación → −35% en churn.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)">
+      <p style="font-size:.85rem;color:rgba(255,255,255,.4)">
+        ⏱ 12–16 semanas · Gate reviews al final de cada fase · Microsoft Power BI
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ROI E INVERSIÓN
+     ══════════════════════════════════════════════════════════════ -->
+<section aria-labelledby="roi-title">
+  <div class="section-inner">
+    <p class="section-tag">Inversión y ROI</p>
+    <h2 class="section-title" id="roi-title">El argumento financiero</h2>
+
+    <div class="stats-grid" style="margin-bottom:2rem">
+      <div style="background:var(--brand-navy);border-radius:16px;padding:2rem;color:#fff;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">$18K–26K</div>
+        <div style="font-size:.9rem;opacity:.8">Inversión total del proyecto (única vez)</div>
+        <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">Pago en 5 hitos según avance</div>
+      </div>
+      <div style="background:#1A7A4A;border-radius:16px;padding:2rem;color:#fff;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">$10/mes</div>
+        <div style="font-size:.9rem;opacity:.8">Por usuario (Power BI Pro con Microsoft)</div>
+        <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">25 usuarios ≈ $3,000 USD/año</div>
+      </div>
+      <div style="background:#7B2D00;border-radius:16px;padding:2rem;color:#fff;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">6–18 m</div>
+        <div style="font-size:.9rem;opacity:.8">Tiempo de recuperación de la inversión</div>
+        <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">Solo con ahorro en reportes manuales</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <table class="roi-table">
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th>Monto</th>
+            <th>Frecuencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Inversión del proyecto</td><td>$18,000 – $26,000 USD</td><td>Una sola vez</td></tr>
+          <tr><td>Licencias Power BI Pro (25 usuarios)</td><td>~$3,000 USD</td><td>Anual (con Microsoft)</td></tr>
+          <tr><td>Ahorro en tiempo de reportes (3 analistas)</td><td>$23,040 USD</td><td>Anual</td></tr>
+          <tr><td>Ahorro neto año 1 (caso conservador)</td><td>~$0 – $5,000 USD</td><td class="muted">Punto de equilibrio</td></tr>
+          <tr><td>Ahorro neto año 2 en adelante</td><td class="highlight">~$20,000 USD</td><td class="highlight">Anual recurrente</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     OBJECIONES
+     ══════════════════════════════════════════════════════════════ -->
+<section style="background:#F8FAFC" aria-labelledby="obj-title">
+  <div class="section-inner">
+    <p class="section-tag">Preocupaciones Frecuentes</p>
+    <h2 class="section-title" id="obj-title">El mejor momento para comenzar es hoy</h2>
+
+    <div class="objections reveal">
+
+      <div class="obj-item">
+        <div class="obj-q">
+          <div class="obj-q-badge">Q</div>
+          <div class="obj-q-text">"No es el momento, tenemos muchos proyectos encima."</div>
+          <div class="obj-arrow">▾</div>
+        </div>
+        <div class="obj-a">
+          <div class="a-badge">✓</div>
+          La razón de tener demasiados proyectos encima suele ser la falta de visibilidad para priorizarlos correctamente. Power BI resuelve exactamente ese problema.
+        </div>
+      </div>
+
+      <div class="obj-item">
+        <div class="obj-q">
+          <div class="obj-q-badge">Q</div>
+          <div class="obj-q-text">"Ya tenemos reportes en Excel que nos funcionan."</div>
+          <div class="obj-arrow">▾</div>
+        </div>
+        <div class="obj-a">
+          <div class="a-badge">✓ Respuesta</div>
+          ¿Cuánto tiempo le toma a alguien prepararlos? ¿Y qué pasa con los días entre que se generan y cuando se usan para decidir?
+        </div>
+      </div>
+
+      <div class="obj-item">
+        <div class="obj-q">
+          <div class="obj-q-badge">Q</div>
+          <div class="obj-q-text">"No sé si nuestros datos están listos para esto."</div>
+          <div class="obj-arrow">▾</div>
+        </div>
+        <div class="obj-a">
+          <div class="a-badge">✓ Respuesta</div>
+          Nadie tiene los datos perfectos al empezar. La Fase 1 incluye un diagnóstico honesto de calidad de datos. Es mejor saberlo y trabajarlo.
+        </div>
+      </div>
+
+      <div class="obj-item">
+        <div class="obj-q">
+          <div class="obj-q-badge">Q</div>
+          <div class="obj-q-text">"El precio es alto para nuestro presupuesto."</div>
+          <div class="obj-arrow">▾</div>
+        </div>
+        <div class="obj-a">
+          <div class="a-badge">✓ Respuesta</div>
+          ¿Cuánto está costando hoy no tener esta visibilidad? Podemos comenzar con las 2 áreas de mayor impacto para reducir la inversión inicial.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CTA FINAL
+     ══════════════════════════════════════════════════════════════ -->
+<div class="cta-section" aria-labelledby="cta-title">
+  <div style="position:relative;z-index:1">
+    <p class="cta-lead">El siguiente paso no es firmar un contrato.</p>
+    <h2 class="cta-title" id="cta-title">
+      Es una reunión de diagnóstico<br>
+      de <em style="color:#F2A900;font-style:normal">90 minutos</em>, sin costo.
+    </h2>
+    <ul class="cta-checks">
+      <li>Revisamos sus fuentes de datos y KPIs prioritarios.</li>
+      <li>Identificamos las 2 áreas de mayor impacto para su empresa.</li>
+      <li>Al terminar: propuesta formal con alcance y precio cerrado.</li>
+    </ul>
+    <a href="contacto.html" class="btn btn-primary btn-lg">
+      ¿Cuándo agendamos? →
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     REFERENCIAS
+     ══════════════════════════════════════════════════════════════ -->
+<section style="background:#F8FAFC;padding:3rem 2rem">
+  <div class="section-inner">
+    <p style="font-size:.75rem;font-weight:700;letter-spacing:.12em;color:var(--brand-slate);margin-bottom:1rem;text-transform:uppercase">Fuentes Bibliográficas</p>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem">
+      <li style="font-size:.8rem;color:var(--brand-slate)">
+        <strong>McKinsey Global Institute</strong> — Analytics Comes of Age (mckinsey.com)
+      </li>
+      <li style="font-size:.8rem;color:var(--brand-slate)">
+        <strong>Forrester Consulting / Collibra</strong> — Elevating the Role of the CDO, 900 líderes (collibra.com)
+      </li>
+      <li style="font-size:.8rem;color:var(--brand-slate)">
+        <strong>Harvard Business Review / Google Cloud</strong> — Data Leaders Study, 2023, 366 ejecutivos (cloud.google.com)
+      </li>
+      <li style="font-size:.8rem;color:var(--brand-slate)">
+        <strong>BARC Research</strong> — Big Data Analytics Survey (barc-research.com)
+      </li>
+      <li style="font-size:.8rem;color:var(--brand-slate)">
+        <strong>passivesecrets.com</strong> — Data-Driven Decision Making Statistics 2025
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <!-- ═══ EDITA: nombre y tagline ═══ -->
+        <div class="footer-brand">[Nombre<span>.</span>]</div>
+        <div class="footer-tagline">Inteligencia de Negocios · Power BI · Capacitación</div>
+      </div>
+      <nav class="footer-links" aria-label="Navegación secundaria">
+        <a href="index.html">Inicio</a>
+        <a href="notebooks.html">Notebooks</a>
+        <a href="nosotros.html">Quiénes Somos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <!-- ═══ EDITA: tu empresa y año ═══ -->
+      <span>© <span id="yr"></span> [Nombre de tu empresa]. Todos los derechos reservados.</span>
+      <span>Hecho con ♥ en México</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Calculator rows
+  const calcData = [
+    { lbl: '# Personas preparando reportes', val: '3' },
+    { lbl: '× Horas semanales por persona',  val: '8 h' },
+    { lbl: '× Semanas al mes',               val: '4' },
+    { lbl: '× Costo / hora del perfil',      val: '$20' },
+  ];
+  const tbody = document.getElementById('calc-rows');
+  calcData.forEach(({ lbl, val }) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="padding:.6rem .75rem .6rem 0;font-size:.9rem;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.06)">${lbl}</td>
+      <td style="padding:.6rem 0;font-size:1rem;font-weight:700;color:#F2A900;text-align:right;border-bottom:1px solid rgba(255,255,255,.06)">${val}</td>`;
+    tbody.appendChild(tr);
+  });
+
+  // Before/After rows
+  const baData = [
+    ['El analista dedica 8h/semana a consolidar datos en Excel.', '8 horas libres para analizar. El reporte se actualiza solo.'],
+    ['Cada área llega a la junta con "su versión" de los números.', 'Todos ven el mismo dashboard. La junta empieza en el análisis.'],
+    ['Para saber el estado de una región hay que pedir el dato.', '2 clics en el dashboard desde el teléfono a las 7am.'],
+    ['Decisiones tomadas con datos de hace 30 días.', 'Datos actualizados automáticamente cada mañana.'],
+  ];
+  const baContainer = document.getElementById('ba-rows');
+  baData.forEach(([before, after], i) => {
+    const div = document.createElement('div');
+    div.className = 'ba-row reveal' + (i > 0 ? ` reveal-delay-${Math.min(i,3)}` : '');
+    div.innerHTML = `
+      <div class="ba-before">${before}</div>
+      <div class="ba-mid">→</div>
+      <div class="ba-after">${after}</div>`;
+    baContainer.appendChild(div);
+  });
+</script>
+</body>
+</html>
