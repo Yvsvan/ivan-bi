@@ -16,8 +16,8 @@
 <nav class="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <div class="nav-logo">BI</div>
-      <span class="nav-name">[Nombre<span>.</span>]</span>
+      <div class="nav-logo">DC</div>
+      <span class="nav-name">Data Consulting<span>.</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
@@ -33,19 +33,35 @@
 <header class="page-hero">
   <div class="page-hero-inner">
     <p class="page-hero-tag">📓 Análisis & Notebooks</p>
-    <h1 class="page-hero-title">Notebooks Interactivos</h1>
+    <h1 class="page-hero-title">Notebooks Python</h1>
     <p class="page-hero-lead">
-      Carga cualquier notebook exportado como HTML y explóralo directamente aquí,
-      sin necesidad de instalar Python ni Jupyter.
+      Visualiza notebooks de Python, análisis exploratorio de datos, machine learning y más. 
     </p>
   </div>
 </header>
 
 <!-- MAIN CONTENT -->
+ 
 <section style="padding:3rem 2rem">
   <div class="section-inner">
+    <div style="padding-top:1rem">
+      <p class="section-tag">Notebooks Destacados</p>
+      <h2 class="section-title" style="margin-bottom:1.5rem">Análisis publicados</h2>
+      <div class="nb-list">
+        <div class="nb-item" onclick="loadExternalNb('{css,js,assets/notebooks}/Customer_churn.html')">
+          <div class="nb-item-icon">📓</div>
+          <div>
+            <div class="nb-item-name">Análisis de pérdida de clientes para empresa de telecomunicaciones</div>
+            <div class="nb-item-meta">Actualizado: Marzo 2026  ·  1,168 KB</div>
+          </div>
+          <div class="nb-item-actions">
+            <button class="nb-btn-sm">Ver ↗</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- How-to banner -->
+    <!-- How-to banner
     <div style="background:#FFF8E7;border:1px solid rgba(242,169,0,.4);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;align-items:flex-start;gap:1rem">
       <div style="font-size:1.5rem;flex-shrink:0">💡</div>
       <div>
@@ -56,15 +72,15 @@
           Luego arrastra el <code style="background:rgba(0,0,0,.06);border-radius:4px;padding:.1em .4em;font-family:'JetBrains Mono',monospace;font-size:.85em">.html</code> a la zona de carga de abajo.
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- Upload zone -->
+    <!-- Upload zone 
     <div class="nb-upload-zone" id="nb-upload-zone" role="button" tabindex="0" aria-label="Cargar notebook HTML">
       <input type="file" class="nb-upload-input" id="nb-file-input" accept=".html,.htm" multiple>
       <div class="nb-upload-icon">📂</div>
       <div class="nb-upload-title">Arrastra tu notebook aquí o haz clic para seleccionar</div>
       <div class="nb-upload-hint">Archivos HTML exportados desde Jupyter · Se mantienen en esta sesión</div>
-    </div>
+    </div>-->
 
     <!-- Loaded notebooks list -->
     <div class="nb-list" id="nb-list" style="display:none;margin-top:2rem"></div>
@@ -75,16 +91,15 @@
         <div class="nb-empty" id="nb-empty">
           <div class="nb-empty-icon">📓</div>
           <p style="font-size:1rem;font-weight:600;color:var(--brand-navy);margin-bottom:.5rem">
-            Ningún notebook cargado todavía
+            Haz clic en alguna de las notebooks listadas arriba para visualizarla aquí.
           </p>
           <p style="font-size:.875rem;color:var(--brand-slate)">
-            Carga un .html exportado desde Jupyter para visualizarlo aquí.
+            ¿Alguna notebook te llamó la atención? Contáctanos y menciona el título para conversar sobre ese análisis o proyecto en particular.
           </p>
         </div>
       </div>
     </div>
-
-    <!-- Notebook types section -->
+    <!-- Notebook types section
     <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--brand-light)">
       <p class="section-tag">Tipos de Análisis</p>
       <h2 class="section-title" style="margin-bottom:1.5rem">¿Qué puedes mostrar aquí?</h2>
@@ -127,26 +142,11 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
-    <!-- ═══ EDITA: agrega aquí links fijos a notebooks que ya tengas publicados ═══
-    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--brand-light)">
-      <p class="section-tag">Notebooks Destacados</p>
-      <h2 class="section-title" style="margin-bottom:1.5rem">Análisis publicados</h2>
-      <div class="nb-list">
-        <div class="nb-item" onclick="loadExternalNb('assets/notebooks/ejemplo1.html')">
-          <div class="nb-item-icon">📓</div>
-          <div>
-            <div class="nb-item-name">Análisis de Ventas Q3 2024</div>
-            <div class="nb-item-meta">Actualizado: Dic 2024  ·  850 KB</div>
-          </div>
-          <div class="nb-item-actions">
-            <button class="nb-btn-sm">Ver ↗</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    ═══ -->
+  
+    
+  
 
   </div>
 </section>
@@ -156,7 +156,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">[Nombre<span>.</span>]</div>
+        <div class="footer-brand">Datas Consulting<span>.</span></div>
         <div class="footer-tagline">Inteligencia de Negocios · Power BI · Capacitación</div>
       </div>
       <nav class="footer-links">
@@ -167,8 +167,8 @@
       </nav>
     </div>
     <div class="footer-bottom">
-      <span>© <span class="yr"></span> [Nombre de tu empresa].</span>
-      <span>Notebooks se cargan localmente — tus datos no se suben a ningún servidor.</span>
+      <span>© <span class="yr"></span> Iván Aguilera.</span>
+      
     </div>
   </div>
 </footer>

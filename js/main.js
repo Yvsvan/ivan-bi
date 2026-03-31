@@ -109,6 +109,15 @@ document.querySelectorAll('.chart-bars')?.forEach(el => barObserver.observe(el))
   baRowsContainer.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
 
+// ── Load external notebook ───────────────────────────────────
+function loadExternalNb(path) {
+  const nbViewer = document.getElementById('nb-viewer');
+  if (!nbViewer) return;
+  nbViewer.innerHTML = `<iframe src="${path}" title="Notebook"></iframe>`;
+  nbViewer.style.display = 'block';
+  nbViewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 // ── Notebook viewer ───────────────────────────────────────────
 (function initNotebooks() {
   const uploadZone  = document.getElementById('nb-upload-zone');
