@@ -755,9 +755,9 @@ section { padding: 5rem 2rem; }
   font-weight: 700;
   font-size: 0.75rem;
   border-radius: 100px;
-  padding: 0.25rem 0.25rem;
-  margin-bottom: 0.25rem;
+  padding-right: 0.25rem;
   margin-top: 0.75rem;
+  
 }
 .obj-item.open .obj-a { display: block; }
 
@@ -768,6 +768,9 @@ section { padding: 5rem 2rem; }
   text-align: center;
   position: relative;
   overflow: hidden;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 .cta-section::before {
   content: '';
