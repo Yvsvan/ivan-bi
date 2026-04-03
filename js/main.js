@@ -76,7 +76,7 @@ document.querySelectorAll('.chart-bars')?.forEach(el => barObserver.observe(el))
 
   const rows = [
     {
-      before: 'Reportes estáticos en Excel (réplicación de datos)',
+      before: 'Reportes estáticos en Excel (replicación de datos)',
       after: 'Dashboard en tiempo real interactivo'
     },
     {
