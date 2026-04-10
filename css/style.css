@@ -1246,7 +1246,7 @@ footer {
 .demo-content { background: #F8FAFC; }
 .demo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.15rem;
   margin-top: 1.6rem;
 }
