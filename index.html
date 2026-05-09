@@ -1,29 +1,25 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ═══════════════════════════════════════════════════════════
-       EDITA AQUÍ: título y descripción del sitio
-       ═══════════════════════════════════════════════════════════ -->
   <title>Data Consulting</title>
-  <meta name="description" content="Implementamos Power BI en su empresa. De la intuición a la inteligencia — en 12 semanas.">
+  <meta name="description" content="Implementamos Power BI en su empresa. Sus datos están ahí — el problema es que nadie los puede ver cuando los necesita.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/moderno.css">
 
-  <!-- ═══════════════════════════════════════════════════════════
-       FAVICON: reemplaza con tu propio favicon
-       ═══════════════════════════════════════════════════════════ -->
   <link rel="icon" type="image/png" href="assets/tab-dc-logo.png" sizes="32x32">
   <link rel="icon" type="image/png" href="assets/tab-dc-logo.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="assets/tab-dc-logo.png" sizes="180x180"> 
+  <link rel="apple-touch-icon" href="assets/tab-dc-logo.png" sizes="180x180">
 </head>
 <body>
+
+<div class="scroll-progress-bar" id="scrollProgress" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 
 <!-- ══════════════════════════════════════════════════════════════
      NAVBAR
@@ -36,16 +32,17 @@
       <img src="assets/dc-logo.png" alt="Logo Data Consulting" style="width:100%;height:100%;object-fit:contain;margin:50px">
       </div>
       <span class="nav-name">
-        <!-- ═══ EDITA: nombre de tu sitio/empresa ═══ -->
         Data Consulting<span>.</span>
       </span>
     </a>
 
     <ul class="nav-links" role="list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="notebooks.html">Notebooks</a></li>
+      <li><a href="index.html" aria-current="page">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="casos.html">Casos</a></li>
       <li><a href="demo.html">Demo</a></li>
-      <li><a href="nosotros.html">Quiénes Somos</a></li>      
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="nosotros.html">Quiénes Somos</a></li>
       <li><a href="contacto.html" class="nav-cta">Contáctanos →</a></li>
     </ul>
 
@@ -57,33 +54,39 @@
 </nav>
 
 <!-- ══════════════════════════════════════════════════════════════
-     HERO
+     HERO — NUEVO
      ══════════════════════════════════════════════════════════════ -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-inner">
 
-    <div class="hero-badge">Consultoría Power BI</div>
+    <div class="hero-badge">Consultoría Power BI · México</div>
 
-    <h1 class="hero-title" id="hero-title">
-      De la Intuición<br>
-      a la <em>Inteligencia</em>
+    <div class="hero-typewriter" aria-hidden="true" id="heroTypewriter">
+      <span class="typewriter-text"></span>
+    </div>
+
+    <h1 class="hero-title hero-title-hidden" id="hero-title">
+      Sus datos están ahí.<br>
+      El problema es que <em>nadie los puede ver</em><br>
+      cuando los necesita.
     </h1>
 
-    <p class="hero-subtitle">
-      Lo que su empresa pierde cada mes sin datos en tiempo real.
+    <p class="hero-subtitle hero-subtitle-hidden">
+      Implementamos Power BI para que su equipo deje de perseguir la información —
+      y empiece a usarla para tomar mejores decisiones, más rápido.
     </p>
 
-    <div class="hero-cta-group">
+    <div class="hero-cta-group hero-cta-hidden">
       <a href="contacto.html" class="btn btn-primary btn-lg">
         Agendar Diagnóstico Gratuito
       </a>
       <a href="demo.html" class="btn btn-outline btn-lg">
-        Ver Demo
+        Ver Demo en Vivo
       </a>
     </div>
 
-    <div class="hero-stats">
+    <div class="hero-stats hero-stats-hidden">
       <div class="stat-item">
         <div class="stat-num">23×</div>
         <div class="stat-lbl">más probabilidades de<br>adquirir nuevos clientes</div>
@@ -102,12 +105,155 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════
-     LA BRECHA (91% vs 57%)
+     TRUST BAR
+     ══════════════════════════════════════════════════════════════ -->
+<div class="trust-bar" aria-label="Industrias atendidas">
+  <span class="trust-bar-label">Para empresas de 20 a 200 empleados en:</span>
+  <div class="trust-bar-icons">
+    <div class="trust-bar-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v2H3zm0 8h18v2H3zm0 8h18v2H3z"/></svg>
+      <span>Retail</span>
+    </div>
+    <div class="trust-bar-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20v2H2zm2-2V9l8-7 8 7v9H4zm2-2h12V10.4L12 4.8 6 10.4V16zm4-6h4v6h-4z"/></svg>
+      <span>Manufactura</span>
+    </div>
+    <div class="trust-bar-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>Logística</span>
+    </div>
+    <div class="trust-bar-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+      <span>Servicios Fin.</span>
+    </div>
+    <div class="trust-bar-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+      <span>RR.HH.</span>
+    </div>
+    <div class="trust-bar-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+      <span>Educación</span>
+    </div>
+    <div class="trust-bar-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 15.59.24 12.76.05 10.77-.1 9.01.86 7.86 2.37L7 3.43 6.14 2.36C5 .87 3.23-.1 1.24.05-1.59.24-4 2.54-4 4.66c0 .46.11.9.18 1.34H-4v13c0 1.66 1.34 3 3 3h18c1.66 0 3-1.34 3-3V6h-4z M20 19H4V8h16v11z"/></svg>
+      <span>E-commerce</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ¿LE SUENA FAMILIAR? — NUEVA
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section-familiar" aria-labelledby="familiar-title">
+  <div class="section-inner">
+
+    <p class="section-tag">El día a día</p>
+    <h2 class="section-title" id="familiar-title">
+      ¿Le suena familiar?
+    </h2>
+    <p class="section-lead" style="max-width:560px;margin:0 auto 2.5rem;text-align:center;color:var(--brand-slate)">
+      Estos no son problemas de tecnología. Son el resultado de crecer más rápido
+      que los sistemas de información que acompañaron ese crecimiento.
+    </p>
+
+    <div class="familiar-grid">
+
+      <div class="familiar-card reveal" data-audience="ceo">
+        <div class="familiar-card-role">Para el Director General</div>
+        <blockquote class="familiar-card-quote">
+          "Pedí el reporte de ventas del mes. Me lo mandaron el martes. Para el jueves
+          ya era información vieja."
+        </blockquote>
+        <div class="familiar-card-pain">Decisiones con datos de hace 30 días.</div>
+      </div>
+
+      <div class="familiar-card reveal reveal-delay-1" data-audience="director">
+        <div class="familiar-card-role">Para el Director de Área</div>
+        <blockquote class="familiar-card-quote">
+          "Cada junta empieza igual: 10 minutos discutiendo cuáles son los números
+          correctos porque cada área tiene su propio Excel."
+        </blockquote>
+        <div class="familiar-card-pain">Sin una sola fuente de verdad.</div>
+      </div>
+
+      <div class="familiar-card reveal reveal-delay-2" data-audience="ceo">
+        <div class="familiar-card-role">Para el Director General</div>
+        <blockquote class="familiar-card-quote">
+          "Sé que hay un problema en operaciones. Lo siento. Pero no puedo verlo
+          con claridad — solo reacciono cuando ya duele."
+        </blockquote>
+        <div class="familiar-card-pain">Gestión reactiva en lugar de preventiva.</div>
+      </div>
+
+      <div class="familiar-card reveal" data-audience="director">
+        <div class="familiar-card-role">Para el Director de Área</div>
+        <blockquote class="familiar-card-quote">
+          "Mi analista más capaz pasa el 60% de su tiempo descargando, limpiando
+          y cruzando Excels. Para eso lo contraté."
+        </blockquote>
+        <div class="familiar-card-pain">Talento caro haciendo trabajo manual.</div>
+      </div>
+
+      <div class="familiar-card reveal reveal-delay-1" data-audience="ceo">
+        <div class="familiar-card-role">Para el Director General</div>
+        <blockquote class="familiar-card-quote">
+          "Las alertas de un problema llegan cuando el daño ya está hecho.
+          Nunca antes."
+        </blockquote>
+        <div class="familiar-card-pain">Sin visibilidad anticipada, sin tiempo de reacción.</div>
+      </div>
+
+      <div class="familiar-card reveal reveal-delay-2" data-audience="director">
+        <div class="familiar-card-role">Para el Director de Área</div>
+        <blockquote class="familiar-card-quote">
+          "Para saber cómo vamos en el mes, le tengo que preguntar a alguien
+          que primero tiene que preparar el reporte."
+        </blockquote>
+        <div class="familiar-card-pain">La información no está disponible cuando se necesita.</div>
+      </div>
+
+    </div>
+
+    <div class="familiar-close reveal">
+      <p class="familiar-close-text">
+        Si reconoció al menos dos de estas situaciones, su empresa ya tiene
+        suficiente contexto para una conversación que vale la pena.
+      </p>
+      <a href="contacto.html" class="btn btn-primary">
+        Agendemos 30 minutos →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PUENTE EMPÁTICO — NUEVO
+     ══════════════════════════════════════════════════════════════ -->
+<div class="section-bridge">
+  <div class="bridge-inner">
+    <p class="bridge-line">
+      Esto no es un problema de su empresa en particular.
+    </p>
+    <p class="bridge-emphasis">
+      Es el patrón más común en PYMEs mexicanas que crecieron más rápido
+      que sus sistemas de información.
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     LA BRECHA (91% vs 57%) — MODIFICADA
      ══════════════════════════════════════════════════════════════ -->
 <section aria-labelledby="brecha-title">
   <div class="section-inner">
-    <p class="section-tag">Intención vs Realidad</p>
-    <h2 class="section-title" id="brecha-title">La brecha más costosa</h2>
+    <p class="section-tag">Intención vs Realidad — Datos 2025</p>
+    <h2 class="section-title" id="brecha-title">No están solos en esta brecha</h2>
+
+    <p class="section-lead light" style="max-width:520px;margin:0 auto 2rem;text-align:center">
+      9 de cada 10 empresas saben que los datos son críticos para su éxito.
+      Solo la mitad los está usando de verdad. La diferencia es el acceso a las herramientas correctas.
+    </p>
 
     <div class="two-col" style="gap:1.25rem">
       <div class="gap-card gap-left reveal">
@@ -137,113 +283,157 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════
-     CIFRAS REALES
-     ══════════════════════════════════════════════════════════════ -->
-<section class="section-dark" aria-labelledby="cifras-title">
-  <div class="section-inner">
-    <p class="section-tag">El Costo del Status Quo</p>
-    <h2 class="section-title light" id="cifras-title">Cifras que cambian la conversación</h2>
-    <p class="section-lead light">Tres estudios globales. Tres razones para actuar hoy.</p>
-
-    <div class="stats-grid">
-      <div class="stat-card reveal">
-        <div class="num">23×</div>
-        <div class="lbl">Más probabilidades de adquirir nuevos clientes en organizaciones data-driven.</div>
-        <div class="src">McKinsey Global Institute — Analytics Comes of Age</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-1">
-        <div class="num">58%</div>
-        <div class="lbl">Más propensas a alcanzar sus metas de ingresos frente a empresas sin datos.</div>
-        <div class="src">Forrester Consulting / Collibra — 900 líderes encuestados</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-2">
-        <div class="num">+8%</div>
-        <div class="lbl">De ganancias y −10% en costos operativos en empresas con analytics activo.</div>
-        <div class="src">BARC Research — Big Data Analytics Survey</div>
-      </div>
-    </div>
-
-    <!-- <div class="chart-simple reveal">
-      <div class="chart-title">Probabilidad de superar metas de ingresos (%)</div>
-      <div class="chart-bars">
-        <div class="bar-wrap">
-          <div class="bar bar-data" data-h="93px" style="height:0">
-            <span class="val">77%</span>
-          </div>
-          <div class="bar-lbl">Empresas<br>Data-Driven</div>
-        </div>
-        <div class="bar-wrap">
-          <div class="bar bar-traditional" data-h="55px" style="height:0">
-            <span class="val">45%</span>
-          </div>
-          <div class="bar-lbl">Empresas<br>Tradicionales</div>
-        </div>
-      </div>
-      <p style="font-size:.75rem;color:rgba(255,255,255,.3);margin-top:1rem">
-        Fuente: Harvard Business Review para Google Cloud, 2023 (366 ejecutivos)
-      </p>
-    </div> -->
-  </div> 
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════
-     PREGUNTA DISRUPTIVA
-     ══════════════════════════════════════════════════════════════ -->
-<div class="section-disruptive" aria-labelledby="disruptive-q">
-  <div class="disruptive-q">Una pregunta, antes de continuar:</div>
-  <h2 class="disruptive-title" id="disruptive-q">
-    ¿Cuánto tiempo tarda su equipo<br>
-    en tener el número exacto?
-  </h2>
-  <div class="disruptive-answer">
-    Si la respuesta es más de 10 segundos — sigamos.
-  </div>
-  <p style="margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.35);font-style:italic">
-    Esa brecha tiene un costo real y cuantificable.
-  </p>
-</div>
-
-
-
-<!-- ══════════════════════════════════════════════════════════════
-     CALCULADORA DE COSTO
+     CALCULADORA INTERACTIVA CON SLIDERS — REEMPLAZA LA ESTÁTICA
      ══════════════════════════════════════════════════════════════ -->
 <section class="section-navy" aria-labelledby="costo-title">
   <div class="section-inner">
     <p class="section-tag">El Costo Operacional</p>
-    <h2 class="section-title light" id="costo-title">El costo que nadie calcula</h2>
+    <h2 class="section-title light" id="costo-title">
+      Calcule lo que le cuesta no tener los datos en tiempo real
+    </h2>
+    <p style="color:rgba(255,255,255,.55);max-width:500px;margin:0 auto 2.5rem;text-align:center">
+      Ajuste los valores de su empresa y vea el costo real de preparar reportes manualmente.
+    </p>
 
-    <div class="two-col-lg two-col reveal">
-      <div>
-        <p style="color:rgba(255,255,255,.7);margin-bottom:1.25rem;font-weight:600">La fórmula del costo real:</p>
-        <table style="width:100%;border-collapse:collapse">
-          <tbody id="calc-rows"></tbody>
-        </table>
-        <div style="background:#0A1929;border-radius:8px;padding:1.5rem;margin-top:.75rem">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#F2A900">
-            = $14,400 MXN / mes
-          </div>
-          <div style="font-size:.85rem;color:rgba(255,255,255,.5);margin-top:.25rem">
-            solo en preparación manual de reportes.
-          </div>
+    <div class="roi-calc-hero reveal" id="roiCalc">
+      <div class="roi-inputs">
+
+        <div class="roi-input-group">
+          <label class="roi-label" for="roi-personas">
+            Personas que preparan reportes
+            <span class="roi-val-badge" id="badge-personas">3</span>
+          </label>
+          <input type="range" id="roi-personas" min="1" max="10" value="3" step="1"
+                 class="roi-slider" aria-label="Número de personas">
+          <div class="roi-slider-limits"><span>1</span><span>10</span></div>
         </div>
+
+        <div class="roi-input-group">
+          <label class="roi-label" for="roi-horas">
+            Horas semanales por persona
+            <span class="roi-val-badge" id="badge-horas">8 h</span>
+          </label>
+          <input type="range" id="roi-horas" min="2" max="20" value="8" step="1"
+                 class="roi-slider" aria-label="Horas semanales">
+          <div class="roi-slider-limits"><span>2 h</span><span>20 h</span></div>
+        </div>
+
+        <div class="roi-input-group">
+          <label class="roi-label" for="roi-costo">
+            Costo / hora del perfil (MXN)
+            <span class="roi-val-badge" id="badge-costo">$150</span>
+          </label>
+          <input type="range" id="roi-costo" min="80" max="500" value="150" step="10"
+                 class="roi-slider" aria-label="Costo por hora">
+          <div class="roi-slider-limits"><span>$80</span><span>$500</span></div>
+        </div>
+
       </div>
-      <div style="display:flex;flex-direction:column;gap:1rem">
-        <div style="background:#7b04005e;border-radius:12px;padding:1.5rem;border-color:#ff1109 ;border-width:2px;border-style:solid">
-          <div style="font-size:.8rem;font-weight:700;color:#FAD98A;margin-bottom:.5rem">ANUALIZADO</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#E74C3C;line-height:1">$172,800 MXN</div>
-          <div style="font-size:.85rem;color:rgba(255,255,255,.7);margin-top:.5rem">en tiempo que Power BI elimina casi por completo.</div>
+
+      <div class="roi-result">
+        <div class="roi-result-label">Costo anual estimado en reportes manuales</div>
+        <div class="roi-result-num" id="roi-result-num">$172,800</div>
+        <div class="roi-result-sub" id="roi-result-sub">Ahorro mensual estimado: $14,400</div>
+        <div class="roi-result-note">
+          Calculado con el 80% del tiempo de preparación de reportes que
+          Power BI elimina automáticamente. Solo en tiempo directo — sin contar
+          decisiones tardías ni oportunidades perdidas.
         </div>
-        <div style="background:rgba(0,0,0,.2);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,.08)">
-          <div style="font-size:.85rem;font-weight:700;color:#F2A900;margin-bottom:.75rem">Costos invisibles:</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:.5rem">
-            <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem"><span style="color:#E74C3C;flex-shrink:0">●</span>Decisiones tomadas con datos de hace 30 días.</li>
-            <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem"><span style="color:#E74C3C;flex-shrink:0">●</span>Juntas donde cada área tiene "su versión" de los números.</li>
-            <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem"><span style="color:#E74C3C;flex-shrink:0">●</span>Proyectos no detectados a tiempo por falta de visibilidad.</li>
-          </ul>
-        </div>
+        <a href="contacto.html" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block">
+          Calculemos juntos su ROI real →
+        </a>
       </div>
+
     </div>
+
+    <div class="reveal" style="margin-top:2rem;border-radius:12px;padding:1.25rem 1.75rem;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.2)">
+      <div style="font-size:.75rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1rem">
+        Costos que no aparecen en la calculadora
+      </div>
+      <ul style="list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+        <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem">
+          <span style="color:#E74C3C;flex-shrink:0;margin-top:.15em">●</span>
+          Decisiones tomadas con datos de hace 30 días.
+        </li>
+        <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem">
+          <span style="color:#E74C3C;flex-shrink:0;margin-top:.15em">●</span>
+          Juntas donde cada área tiene "su versión" de los números.
+        </li>
+        <li style="font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:flex-start;gap:.5rem">
+          <span style="color:#E74C3C;flex-shrink:0;margin-top:.15em">●</span>
+          Problemas no detectados a tiempo por falta de visibilidad.
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PREGUNTA DISRUPTIVA — MODIFICADA
+     ══════════════════════════════════════════════════════════════ -->
+<div class="section-disruptive" aria-labelledby="disruptive-q">
+  <div class="disruptive-q">Una pregunta honesta:</div>
+  <h2 class="disruptive-title" id="disruptive-q">
+    ¿Cuánto tiempo necesita su equipo<br>
+    para traerle el número exacto?
+  </h2>
+  <div class="disruptive-answer">
+    Si la respuesta es más de 10 segundos — eso tiene un costo real.
+  </div>
+  <p style="margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.35);font-style:italic">
+    Y es posible reducirlo a cero. Eso es exactamente lo que implementamos.
+  </p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     AHORA IMAGINA LO CONTRARIO — NUEVA
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section-promise" aria-labelledby="promise-title">
+  <div class="section-inner">
+    <p class="section-tag">La visión</p>
+    <h2 class="section-title" id="promise-title">
+      Ahora imagina lo contrario.
+    </h2>
+
+    <div class="promise-grid">
+
+      <div class="promise-card reveal">
+        <div class="promise-card-icon" aria-hidden="true">📱</div>
+        <p class="promise-card-text">
+          Su director de ventas abre su teléfono un lunes por la mañana y ve,
+          en tiempo real, si el trimestre va bien — sin pedirle un reporte a nadie.
+        </p>
+      </div>
+
+      <div class="promise-card reveal reveal-delay-1">
+        <div class="promise-card-icon" aria-hidden="true">🤝</div>
+        <p class="promise-card-text">
+          La reunión de dirección empieza con todos mirando el mismo número,
+          en la misma pantalla. Sin discusión. Con tiempo para decidir.
+        </p>
+      </div>
+
+      <div class="promise-card reveal reveal-delay-2">
+        <div class="promise-card-icon" aria-hidden="true">🔔</div>
+        <p class="promise-card-text">
+          Un problema en logística se detecta automáticamente en horas.
+          No en semanas, cuando el daño ya es visible en el estado de resultados.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="promise-footer">
+      <p class="promise-footer-text">
+        Eso no es tecnología del futuro.<br>
+        <strong>Es lo que implementamos hoy con Power BI.</strong>
+      </p>
+      <a href="servicios.html" class="btn btn-primary">
+        Ver cómo lo hacemos →
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -262,6 +452,60 @@
     </div>
 
     <div id="ba-rows"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     BENTO SERVICIOS
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section-dark" aria-labelledby="svc-bento-title">
+  <div class="section-inner">
+    <p class="section-tag">Lo que hacemos</p>
+    <h2 class="section-title light" id="svc-bento-title">Servicios para cada etapa de su empresa</h2>
+    <p style="color:rgba(255,255,255,.55);max-width:540px;margin:0 auto 2.5rem;text-align:center">
+      Desde el primer dashboard hasta un centro de inteligencia empresarial completo.
+    </p>
+    <div class="bento-services">
+      <div class="ind-card" style="border-color:rgba(6,182,212,.2)">
+        <div class="ind-card-icon">⚡</div>
+        <div class="ind-card-name">Pulso</div>
+        <div class="ind-card-kpi">Su primer dashboard en 7 días. Para ver sus datos antes de comprometerse con algo más grande.</div>
+        <div class="ind-card-metric" style="color:#06B6D4">$5K–$9K MXN</div>
+      </div>
+      <div class="ind-card" style="border-color:rgba(20,184,166,.2)">
+        <div class="ind-card-icon">🚀</div>
+        <div class="ind-card-name">Reporte Express</div>
+        <div class="ind-card-kpi">Dashboard ejecutivo publicado en Power BI Service en 2 semanas. KPIs actualizados automáticamente.</div>
+        <div class="ind-card-metric" style="color:#14B8A6">$15K–$25K MXN</div>
+      </div>
+      <div class="ind-card" style="border-color:rgba(99,102,241,.2)">
+        <div class="ind-card-icon">🌱</div>
+        <div class="ind-card-name">Starter</div>
+        <div class="ind-card-kpi">Un área completa transformada con 3–5 reportes interconectados. Ideal para 20–50 empleados.</div>
+        <div class="ind-card-metric" style="color:#6366F1">$40K–$70K MXN</div>
+      </div>
+      <div class="ind-card" style="border-color:rgba(242,169,0,.25)">
+        <div class="ind-card-icon">⭐</div>
+        <div class="ind-card-name">Professional</div>
+        <div class="ind-card-kpi">Sistema BI multi-área con modelo estrella, RLS y 3 tracks de capacitación para 50–150 empleados.</div>
+        <div class="ind-card-metric" style="color:#F2A900">$80K–$140K MXN</div>
+      </div>
+      <div class="ind-card" style="border-color:rgba(236,72,153,.2)">
+        <div class="ind-card-icon">🎓</div>
+        <div class="ind-card-name">Capacitación</div>
+        <div class="ind-card-kpi">Workshops y bootcamps in-company. Desde 8 horas hasta preparación para certificación PL-300.</div>
+        <div class="ind-card-metric" style="color:#EC4899">A medida</div>
+      </div>
+      <div class="ind-card" style="border-color:rgba(16,185,129,.2)">
+        <div class="ind-card-icon">🔄</div>
+        <div class="ind-card-name">Retainer</div>
+        <div class="ind-card-kpi">Contrato mensual de horas para evolución continua de su solución BI ya existente.</div>
+        <div class="ind-card-metric" style="color:#10B981">desde $9K MXN/mes</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="servicios.html" class="btn btn-outline">Ver todos los servicios →</a>
+    </div>
   </div>
 </section>
 
@@ -336,7 +580,52 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════
-     ROI E INVERSIÓN
+     BENTO INDUSTRIAS
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section-dark" aria-labelledby="ind-bento-title">
+  <div class="section-inner">
+    <p class="section-tag">Experiencia sectorial</p>
+    <h2 class="section-title light" id="ind-bento-title">Resultados reales por industria</h2>
+    <div class="bento-industries" style="margin-top:2rem">
+      <div class="ind-card">
+        <div class="ind-card-icon">🛒</div>
+        <div class="ind-card-name">Retail &amp; E-commerce</div>
+        <div class="ind-card-kpi">Inventario en tiempo real · sell-through · margen por SKU</div>
+        <div class="ind-card-metric">+23% ventas</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-card-icon">🏭</div>
+        <div class="ind-card-name">Manufactura</div>
+        <div class="ind-card-kpi">OEE · tiempos de paro · eficiencia por línea de producción</div>
+        <div class="ind-card-metric">OEE 61→79%</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-card-icon">💼</div>
+        <div class="ind-card-name">Servicios Profesionales</div>
+        <div class="ind-card-kpi">Utilización · rentabilidad por cliente · pipeline de proyectos</div>
+        <div class="ind-card-metric">+25% utilización</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-card-icon">🚚</div>
+        <div class="ind-card-name">Logística</div>
+        <div class="ind-card-kpi">OTIF · costo por envío · rutas críticas en tiempo real</div>
+        <div class="ind-card-metric">OTIF 71→95%</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-card-icon">🏦</div>
+        <div class="ind-card-name">Servicios Financieros</div>
+        <div class="ind-card-kpi">Cartera vencida · cobertura · indicadores regulatorios</div>
+        <div class="ind-card-metric">−35% mora</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="casos.html" class="btn btn-outline">Ver casos de estudio →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ROI E INVERSIÓN — MODIFICADA
      ══════════════════════════════════════════════════════════════ -->
 <section aria-labelledby="roi-title">
   <div class="section-inner">
@@ -344,41 +633,33 @@
     <h2 class="section-title" id="roi-title">El argumento financiero</h2>
 
     <div class="stats-grid" style="margin-bottom:2rem">
-      <div style="background:var(--brand-navy);border-radius:16px;padding:2rem;color:#fff;text-align:center;border:2px solid #F2A900">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">$70K–120K</div>
-        <div style="font-size:.9rem;opacity:.8">Inversión total del proyecto (única vez)</div>
-        <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">Pago en 5 hitos según avance</div>
+      <div style="background:var(--brand-navy);border-radius:16px;padding:2rem;color:#fff;text-align:center;border:2px solid rgba(242,169,0,.3)">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.75rem">Punto de entrada</div>
+        <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">desde $5K MXN</div>
+        <div style="font-size:.9rem;opacity:.8">Su primer dashboard en 7 días</div>
+        <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">Servicio Pulso — sin licencias requeridas</div>
       </div>
-      <div style="background:var(--brand-navy);border-radius:16px;padding:2rem;color:#fff;text-align:center;border:2px solid #F2A900">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">$200/mes</div>
-        <div style="font-size:.9rem;opacity:.8">Por usuario (Power BI Pro con Microsoft)</div>
-        <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">10 usuarios ≈ $24,000 MXN/año</div>
+      <div style="background:var(--brand-navy);border-radius:16px;padding:2rem;color:#fff;text-align:center;border:2px solid rgba(242,169,0,.3)">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.75rem">Ahorro directo</div>
+        <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">$172,800</div>
+        <div style="font-size:.9rem;opacity:.8">MXN anuales en reportes manuales</div>
+        <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">Solo en tiempo directo — caso base 3 analistas</div>
       </div>
       <div style="background:#046e0cee;border-radius:16px;padding:2rem;color:#fff;text-align:center;border:2px solid #F2A900">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">6–18 m</div>
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.75rem">Recuperación</div>
+        <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#F2A900;line-height:1;margin-bottom:.5rem">6–18 m</div>
         <div style="font-size:.9rem;opacity:.8">Tiempo de recuperación de la inversión</div>
         <div style="font-size:.75rem;opacity:.4;margin-top:.5rem;font-style:italic">Solo con ahorro en reportes manuales</div>
       </div>
     </div>
 
-    <div class="reveal">
-      <table class="roi-table">
-        <thead>
-          <tr>
-            <th>Concepto</th>
-            <th>Monto</th>
-            <th>Frecuencia</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Inversión del proyecto</td><td>$70,000 – $120,000 MXN</td><td>Una sola vez</td></tr>
-          <tr><td>Licencias Power BI Pro (10 usuarios)</td><td>~$24,000 MXN</td><td>Anual (con Microsoft)</td></tr>
-          <tr><td>Ahorro en tiempo de reportes (3 analistas)</td><td>$172,800 MXN</td><td>Anual</td></tr>
-          <tr><td>Ahorro neto año 1 (caso conservador)</td><td>~$28,800 – $78,800 MXN</td><td>Punto de equilibrio</td></tr>
-          <tr><td>Ahorro neto año 2 en adelante</td><td class="highlight">~$150,000 MXN</td><td class="highlight">Anual recurrente</td></tr>
-        </tbody>
-      </table>
+    <div style="text-align:center;margin-top:1.5rem">
+      <p style="color:var(--brand-slate);margin-bottom:1rem;font-size:.95rem">
+        Tenemos servicios para cada presupuesto — desde $5,000 hasta $140,000 MXN.
+      </p>
+      <a href="servicios.html" class="btn btn-primary">Ver todos los servicios y precios →</a>
     </div>
+
   </div>
 </section>
 
@@ -445,24 +726,24 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════
-     CTA FINAL
+     CTA FINAL — MODIFICADA
      ══════════════════════════════════════════════════════════════ -->
 <div class="cta-section" aria-labelledby="cta-title">
   <div style="position:relative;z-index:1">
-    <p class="cta-lead">El siguiente paso no es firmar un contrato.</p>
+    <p class="cta-lead">El siguiente paso no cuesta nada.</p>
     <h2 class="cta-title" id="cta-title">
-      Es una reunión de diagnóstico<br>
-      de <em style="color:#F2A900;font-style:normal">90 minutos</em>, sin costo.
+      Es una sesión de diagnóstico<br>
+      de <em style="color:#F2A900;font-style:normal">30 minutos</em>, sin costo.
     </h2>
     <ul class="cta-checks">
-      <li>Revisamos sus fuentes de datos y KPIs prioritarios.</li>
+      <li>Analizamos sus fuentes de datos y KPIs prioritarios.</li>
       <li>Identificamos las 2 áreas de mayor impacto para su empresa.</li>
-      <li>Al terminar: propuesta formal con alcance y precio cerrado.</li>
+      <li>Al terminar: propuesta formal con alcance y precio cerrado — sin sorpresas.</li>
     </ul>
-    <div style="position: center;">
-    <a href="contacto.html" class="btn btn-primary btn-lg">
-      ¿Cuándo agendamos? 
-    </a>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="contacto.html" class="btn btn-primary btn-lg">
+        ¿Cuándo agendamos?
+      </a>
     </div>
   </div>
 </div>
@@ -500,45 +781,113 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <!-- ═══ EDITA: nombre y tagline ═══ -->
         <div class="footer-brand">Data Consulting<span>.</span></div>
         <div class="footer-tagline">Inteligencia de Negocios · Power BI · Capacitación</div>
       </div>
       <nav class="footer-links" aria-label="Navegación secundaria">
         <a href="index.html">Inicio</a>
-        <a href="notebooks.html">Notebooks</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="casos.html">Casos</a>
         <a href="demo.html">Demo</a>
+        <a href="recursos.html">Recursos</a>
         <a href="nosotros.html">Quiénes Somos</a>
+        <a href="notebooks.html">Notebooks</a>
         <a href="contacto.html">Contacto</a>
       </nav>
     </div>
     <div class="footer-bottom">
-      <!-- ═══ EDITA: tu empresa y año ═══ -->
       <span>© <span id="yr"></span> Iván Aguilera. Todos los derechos reservados.</span>
       <span>Hecho con ♥ en México</span>
     </div>
   </div>
 </footer>
 
+<a class="floating-cta"
+   href="https://wa.me/524622078596?text=Hola%2C%20vi%20su%20sitio%20y%20tengo%20preguntas%20sobre%20sus%20servicios%20de%20Power%20BI."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
 <script src="js/main.js"></script>
+<script src="js/interactivo.js"></script>
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 
-  // Calculator rows
-  const calcData = [
-    { lbl: '# Personas preparando reportes', val: '3' },
-    { lbl: '× Horas semanales por persona',  val: '8 h' },
-    { lbl: '× Semanas al mes',               val: '4' },
-    { lbl: '× Costo / hora del perfil',      val: '$150' },
+<!-- Typewriter del hero -->
+<script>
+(function initHeroTypewriter() {
+  const typeEl  = document.querySelector('.typewriter-text');
+  const wrapper = document.getElementById('heroTypewriter');
+  if (!typeEl || !wrapper) return;
+
+  const phrases = [
+    "Piden el reporte del mes… y llega el martes con datos de la semana pasada.",
+    "Cada área llega a la junta con su propio número.",
+    "Hay un problema en operaciones. Nadie lo vio venir."
   ];
-  const tbody = document.getElementById('calc-rows');
-  calcData.forEach(({ lbl, val }) => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td style="padding:.6rem .75rem .6rem 0;font-size:.9rem;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.06)">${lbl}</td>
-      <td style="padding:.6rem 0;font-size:1rem;font-weight:700;color:#F2A900;text-align:right;border-bottom:1px solid rgba(255,255,255,.06)">${val}</td>`;
-    tbody.appendChild(tr);
-  });
+
+  let phraseIndex = 0;
+  let charIndex   = 0;
+  let isDeleting  = false;
+  let pauseTimer  = null;
+
+  const SPEED_TYPE   = 42;
+  const SPEED_DELETE = 18;
+  const PAUSE_FULL   = 1800;
+  const PAUSE_DONE   = 600;
+
+  function type() {
+    const current = phrases[phraseIndex];
+
+    if (!isDeleting) {
+      typeEl.textContent = current.slice(0, ++charIndex);
+      if (charIndex === current.length) {
+        if (phraseIndex === phrases.length - 1) {
+          clearTimeout(pauseTimer);
+          pauseTimer = setTimeout(revealHero, PAUSE_FULL);
+          return;
+        }
+        isDeleting = true;
+        pauseTimer = setTimeout(type, PAUSE_DONE);
+        return;
+      }
+    } else {
+      typeEl.textContent = current.slice(0, --charIndex);
+      if (charIndex === 0) {
+        isDeleting = false;
+        phraseIndex++;
+      }
+    }
+    pauseTimer = setTimeout(type, isDeleting ? SPEED_DELETE : SPEED_TYPE);
+  }
+
+  function revealHero() {
+    wrapper.style.transition = 'opacity 0.5s ease';
+    wrapper.style.opacity    = '0';
+
+    setTimeout(() => {
+      wrapper.style.display = 'none';
+      ['hero-title-hidden', 'hero-subtitle-hidden', 'hero-cta-hidden', 'hero-stats-hidden']
+        .forEach((cls, i) => {
+          const el = document.querySelector('.' + cls);
+          if (!el) return;
+          el.classList.remove(cls);
+          el.style.opacity   = '0';
+          el.style.transform = 'translateY(18px)';
+          el.style.transition = `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`;
+          el.getBoundingClientRect();
+          el.style.opacity   = '1';
+          el.style.transform = 'translateY(0)';
+        });
+    }, 520);
+  }
+
+  setTimeout(type, 800);
+})();
 </script>
 </body>
 </html>

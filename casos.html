@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casos de Éxito · Data Consulting</title>
+  <meta name="description" content="Casos de uso de Power BI en retail, manufactura, servicios profesionales y logística. Escenarios típicos de implementación en PYMEs mexicanas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/moderno.css">
+  <link rel="icon" type="image/png" href="assets/tab-dc-logo.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/tab-dc-logo.png" sizes="180x180">
+</head>
+<body>
+
+<div class="scroll-progress-bar" id="scrollProgress" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<nav class="navbar" role="navigation" aria-label="Menú principal">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo" aria-label="Logo" style="padding:5px">
+        <img src="assets/dc-logo.png" alt="Logo Data Consulting" style="width:100%;height:100%;object-fit:contain">
+      </div>
+      <span class="nav-name">Data Consulting<span>.</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="casos.html">Casos</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="nosotros.html">Quiénes Somos</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contáctanos →</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero" aria-labelledby="casos-hero-title">
+  <div class="page-hero-inner">
+    <p class="page-hero-tag">Casos por Industria</p>
+    <h1 class="page-hero-title" id="casos-hero-title">
+      Power BI aplicado a<br>su industria específica
+    </h1>
+    <p class="page-hero-lead">
+      Escenarios reales de implementación en PYMEs mexicanas. Métricas concretas, problemas reconocibles.
+    </p>
+  </div>
+</header>
+
+<!-- DISCLAIMER -->
+<section class="section-dark" style="padding-top:1.5rem;padding-bottom:1.5rem;display:flow-root">
+  <div class="section-inner">
+    <div class="disclaimer-banner" role="note" style="margin-bottom:0">
+      <span class="disclaimer-icon">ℹ️</span>
+      <span><strong style="color:rgba(255,255,255,.85)">Casos ilustrativos</strong> basados en escenarios típicos de implementación de Power BI en PYMEs mexicanas. Los nombres de empresas son ficticios. Las métricas representan rangos validados en proyectos de la industria.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CASO 1 — RETAIL
+     ══════════════════════════════════ -->
+<section class="section-dark" aria-labelledby="caso-retail-title">
+  <div class="section-inner">
+    <p class="section-tag">Caso 01 · Retail / E-commerce</p>
+
+    <div class="two-col" style="gap:3rem;align-items:center;margin-bottom:3rem">
+      <div>
+        <h2 class="section-title light" id="caso-retail-title">
+          Cadena regional de ferretería elimina quiebres de inventario en tiempo real
+        </h2>
+        <p style="font-size:1rem;color:rgba(255,255,255,.65);line-height:1.7">
+          Una cadena de 8 sucursales con 65 empleados enfrentaba quiebres de stock frecuentes en sus 20 SKUs más vendidos. Los reportes de inventario tardaban 3 días en llegar y cuando llegaban, el problema ya había costado ventas.
+        </p>
+      </div>
+      <div style="text-align:center">
+        <div class="case-hero-metric" style="color:#F2A900">+23%</div>
+        <div class="case-hero-label" style="color:rgba(255,255,255,.65)">Incremento en ventas<br>en el trimestre post-implementación</div>
+      </div>
+    </div>
+
+    <div class="two-col reveal" style="gap:2rem;margin-bottom:2.5rem">
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Contexto del cliente</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Industria:</strong> Retail especializado (ferretería y materiales de construcción)</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Tamaño:</strong> 8 sucursales · 65 empleados · $28M MXN facturación anual</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Problema central:</strong> Quiebres de stock costaban estimado $2.1M MXN/año en ventas perdidas</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Sistema origen:</strong> ERP propietario (MySQL) + hojas de cálculo por sucursal</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Servicio implementado:</strong> Professional (12 semanas)</span></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Solución técnica</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Conexión directa a MySQL via gateway local con refresh cada 2 horas</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Dashboard de inventario por sucursal con alertas de stock mínimo</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Medidas DAX para sell-through rate, rotación y días de inventario</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>RLS para que cada gerente de sucursal vea solo su tienda</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Reporte ejecutivo consolidado para dirección general</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard mockup -->
+    <div class="reveal" style="max-width:680px">
+      <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Dashboard implementado (mockup)</p>
+      <div class="dashboard-mockup">
+        <div class="dash-header">
+          <div class="dash-dot" style="background:#FF5F57"></div>
+          <div class="dash-dot" style="background:#FFBD2E"></div>
+          <div class="dash-dot" style="background:#28C840"></div>
+          <span class="dash-title">Inventario en Tiempo Real · 8 Sucursales</span>
+        </div>
+        <div class="dash-kpi-row">
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#4ADE80">94%</div>
+            <div class="dash-kpi-lbl">Disponibilidad</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#F87171">3</div>
+            <div class="dash-kpi-lbl">Quiebres activos</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#F2A900">8.2</div>
+            <div class="dash-kpi-lbl">Rotación (días)</div>
+          </div>
+        </div>
+        <div class="dash-bars">
+          <div class="dash-bar" style="background:#6366F1;height:80%"></div>
+          <div class="dash-bar" style="background:#6366F1;height:60%"></div>
+          <div class="dash-bar" style="background:#6366F1;height:95%"></div>
+          <div class="dash-bar" style="background:#F87171;height:15%"></div>
+          <div class="dash-bar" style="background:#6366F1;height:75%"></div>
+          <div class="dash-bar" style="background:#6366F1;height:88%"></div>
+          <div class="dash-bar" style="background:#6366F1;height:55%"></div>
+          <div class="dash-bar" style="background:#F2A900;height:30%"></div>
+        </div>
+        <div style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:.5rem">Stock por sucursal (barras rojas = bajo stock)</div>
+      </div>
+    </div>
+
+    <!-- Resultados -->
+    <div style="margin-top:2.5rem">
+      <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Resultados a 90 días</p>
+      <div class="case-results-grid reveal">
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#4ADE80">+23%</div>
+          <div class="case-result-lbl">Incremento en ventas del trimestre</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#4ADE80">-87%</div>
+          <div class="case-result-lbl">Reducción en quiebres de stock</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">2 hrs</div>
+          <div class="case-result-lbl">Datos actualizados vs. 3 días antes</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">$1.8M</div>
+          <div class="case-result-lbl">MXN recuperados en ventas anualizadas</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-quote reveal" style="margin-top:2.5rem;max-width:680px">
+      "Antes llamaba a los gerentes de sucursal para saber si había stock. Ahora abro el dashboard y en 10 segundos sé exactamente dónde estoy parado. Es una diferencia que se siente en la operación diaria."
+      <div class="case-quote-author">— <strong>Director Comercial</strong> · Cadena ferretera regional · Guadalajara</div>
+    </div>
+
+    <hr class="case-divider">
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CASO 2 — MANUFACTURA
+     ══════════════════════════════════ -->
+<section class="section-dark" style="padding-top:0" aria-labelledby="caso-mfg-title">
+  <div class="section-inner">
+    <p class="section-tag">Caso 02 · Manufactura / Industria</p>
+
+    <div class="two-col" style="gap:3rem;align-items:center;margin-bottom:3rem">
+      <div>
+        <h2 class="section-title light" id="caso-mfg-title">
+          Planta manufacturera recupera eficiencia invisible con OEE en Power BI
+        </h2>
+        <p style="font-size:1rem;color:rgba(255,255,255,.65);line-height:1.7">
+          Una planta de 120 empleados creía que su maquinaria operaba al 85% de eficiencia. Los datos revelaron que el OEE real era del 61%. La diferencia: tiempo no planificado de paro que nadie medía.
+        </p>
+      </div>
+      <div style="text-align:center">
+        <div class="case-hero-metric" style="color:#14B8A6">+18%</div>
+        <div class="case-hero-label" style="color:rgba(255,255,255,.65)">Mejora en OEE<br>en los primeros 6 meses</div>
+      </div>
+    </div>
+
+    <div class="two-col reveal" style="gap:2rem;margin-bottom:2.5rem">
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Contexto del cliente</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Industria:</strong> Manufactura de plásticos para empaques</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Tamaño:</strong> 1 planta · 120 operadores · 3 líneas de producción</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Problema:</strong> OEE percibido vs. real con brecha de 24 puntos porcentuales</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Sistema origen:</strong> Registros en Excel por turno + SCADA industrial</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Servicio implementado:</strong> Starter (5 semanas)</span></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Solución técnica</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Pipeline de Power Query para integrar registros de turno desde SharePoint</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Cálculo de OEE (Disponibilidad × Rendimiento × Calidad) con DAX</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Análisis de causas de paro por categoría (mantenimiento, falta de material, cambio de molde)</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Dashboard de turno vs. turno para operadores y supervisores</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#14B8A6;flex-shrink:0">✓</span>Reporte ejecutivo semanal de tendencias para dirección</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard mockup manufactura -->
+    <div class="reveal" style="max-width:680px">
+      <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Dashboard OEE (mockup)</p>
+      <div class="dashboard-mockup">
+        <div class="dash-header">
+          <div class="dash-dot" style="background:#FF5F57"></div>
+          <div class="dash-dot" style="background:#FFBD2E"></div>
+          <div class="dash-dot" style="background:#28C840"></div>
+          <span class="dash-title">OEE · Planta Monterrey · Turno Actual</span>
+        </div>
+        <div class="dash-kpi-row">
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#FBBF24">79%</div>
+            <div class="dash-kpi-lbl">OEE global</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#4ADE80">96%</div>
+            <div class="dash-kpi-lbl">Disponibilidad</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#60A5FA">98%</div>
+            <div class="dash-kpi-lbl">Calidad</div>
+          </div>
+        </div>
+        <div class="dash-bars">
+          <div class="dash-bar" style="background:#14B8A6;height:61%"></div>
+          <div class="dash-bar" style="background:#14B8A6;height:65%"></div>
+          <div class="dash-bar" style="background:#FBBF24;height:72%"></div>
+          <div class="dash-bar" style="background:#14B8A6;height:68%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:79%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:81%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:79%"></div>
+        </div>
+        <div style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:.5rem">OEE por semana (tendencia de mejora visible)</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <div class="case-results-grid reveal">
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#14B8A6">61% → 79%</div>
+          <div class="case-result-lbl">OEE real medido y mejorado</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#4ADE80">-52%</div>
+          <div class="case-result-lbl">Tiempos de paro no planificados</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">+60%</div>
+          <div class="case-result-lbl">Mejora en margen operativo</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">6 sem</div>
+          <div class="case-result-lbl">Tiempo de recuperación de inversión</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-quote reveal" style="margin-top:2.5rem;max-width:680px">
+      "Nunca imaginamos que teníamos una brecha tan grande entre lo que creíamos producir y lo que realmente producíamos. Los datos nos dieron la claridad para actuar de inmediato en las causas correctas."
+      <div class="case-quote-author">— <strong>Gerente de Operaciones</strong> · Planta manufacturera · Monterrey</div>
+    </div>
+
+    <hr class="case-divider">
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CASO 3 — SERVICIOS PROFESIONALES
+     ══════════════════════════════════ -->
+<section class="section-dark" style="padding-top:0" aria-labelledby="caso-svc-title">
+  <div class="section-inner">
+    <p class="section-tag">Caso 03 · Servicios Profesionales</p>
+
+    <div class="two-col" style="gap:3rem;align-items:center;margin-bottom:3rem">
+      <div>
+        <h2 class="section-title light" id="caso-svc-title">
+          Despacho de consultoría descubre que el 30% de sus horas son no facturables
+        </h2>
+        <p style="font-size:1rem;color:rgba(255,255,255,.65);line-height:1.7">
+          Un despacho de 18 consultores senior facturaba bien en papel, pero su margen neto era anémico. El problema no era el precio de las horas — era dónde se iban las horas que no se cobraban.
+        </p>
+      </div>
+      <div style="text-align:center">
+        <div class="case-hero-metric" style="color:#EC4899">+25%</div>
+        <div class="case-hero-label" style="color:rgba(255,255,255,.65)">Incremento en utilization<br>en 90 días</div>
+      </div>
+    </div>
+
+    <div class="two-col reveal" style="gap:2rem;margin-bottom:2.5rem">
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Contexto del cliente</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Industria:</strong> Consultoría fiscal y contable</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Tamaño:</strong> 18 consultores · 4 socios directores</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Problema:</strong> Utilization promedio del 62% vs. objetivo del 80%</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Sistema origen:</strong> Registro de horas en Excel + sistema de facturación propio</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Servicio implementado:</strong> Express (2 semanas)</span></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Solución técnica</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#EC4899;flex-shrink:0">✓</span>Integración de timesheet Excel con sistema de facturación via Power Query</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#EC4899;flex-shrink:0">✓</span>Cálculo de utilization, realization rate y margen por proyecto</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#EC4899;flex-shrink:0">✓</span>Dashboard de pipeline de proyectos con probabilidad ponderada</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#EC4899;flex-shrink:0">✓</span>Análisis de horas no facturables por categoría (interno, propuesta, admin)</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#EC4899;flex-shrink:0">✓</span>Semáforo de rentabilidad por consultor y por proyecto</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="max-width:680px">
+      <div class="dashboard-mockup">
+        <div class="dash-header">
+          <div class="dash-dot" style="background:#FF5F57"></div>
+          <div class="dash-dot" style="background:#FFBD2E"></div>
+          <div class="dash-dot" style="background:#28C840"></div>
+          <span class="dash-title">Utilization · 18 Consultores · Mes actual</span>
+        </div>
+        <div class="dash-kpi-row">
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#4ADE80">78%</div>
+            <div class="dash-kpi-lbl">Utilization</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#FBBF24">$4.2M</div>
+            <div class="dash-kpi-lbl">Pipeline</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#EC4899">34%</div>
+            <div class="dash-kpi-lbl">Margen neto</div>
+          </div>
+        </div>
+        <div class="dash-bars">
+          <div class="dash-bar" style="background:#4ADE80;height:88%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:82%"></div>
+          <div class="dash-bar" style="background:#FBBF24;height:72%"></div>
+          <div class="dash-bar" style="background:#F87171;height:45%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:90%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:85%"></div>
+          <div class="dash-bar" style="background:#FBBF24;height:70%"></div>
+        </div>
+        <div style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:.5rem">Utilization por consultor (rojo = por debajo del objetivo)</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <div class="case-results-grid reveal">
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#EC4899">62% → 77%</div>
+          <div class="case-result-lbl">Utilization real alcanzado</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#4ADE80">-40%</div>
+          <div class="case-result-lbl">Reducción en horas admin no facturables</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">+$1.2M</div>
+          <div class="case-result-lbl">MXN adicionales facturados anualmente</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">2 sem</div>
+          <div class="case-result-lbl">Tiempo de implementación</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-quote reveal" style="margin-top:2.5rem;max-width:680px">
+      "Descubrimos que nuestros consultores más ocupados eran también los que menos facturaban. El dashboard reveló que estaban atrapados en trabajo administrativo interno. Eso cambió en un mes."
+      <div class="case-quote-author">— <strong>Socio Director</strong> · Despacho de consultoría fiscal · Ciudad de México</div>
+    </div>
+
+    <hr class="case-divider">
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CASO 4 — LOGÍSTICA
+     ══════════════════════════════════ -->
+<section class="section-dark" style="padding-top:0" aria-labelledby="caso-log-title">
+  <div class="section-inner">
+    <p class="section-tag">Caso 04 · Logística / Distribución</p>
+
+    <div class="two-col" style="gap:3rem;align-items:center;margin-bottom:3rem">
+      <div>
+        <h2 class="section-title light" id="caso-log-title">
+          Distribuidor B2B lleva su OTIF del 71% al 95% en un trimestre
+        </h2>
+        <p style="font-size:1rem;color:rgba(255,255,255,.65);line-height:1.7">
+          Un distribuidor de abarrotes con 35 rutas y 280 clientes perdía contratos por entregas tardías. El problema: sin visibilidad en tiempo real, los problemas se sabían cuando el cliente llamaba enojado — no antes.
+        </p>
+      </div>
+      <div style="text-align:center">
+        <div class="case-hero-metric" style="color:#10B981">95%</div>
+        <div class="case-hero-label" style="color:rgba(255,255,255,.65)">OTIF alcanzado<br>desde el 71% inicial</div>
+      </div>
+    </div>
+
+    <div class="two-col reveal" style="gap:2rem;margin-bottom:2.5rem">
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Contexto del cliente</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Industria:</strong> Distribución B2B de abarrotes y consumo masivo</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Tamaño:</strong> 35 rutas · 280 clientes · 12 unidades propias</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Problema:</strong> OTIF del 71% generaba penalizaciones de $380K MXN/año con clientes ancla</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Sistema origen:</strong> TMS propio (Access DB) + control de entregas en papel</span></div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#F2A900;flex-shrink:0">■</span><span><strong style="color:#fff">Servicio implementado:</strong> Starter (6 semanas)</span></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Solución técnica</p>
+        <div style="display:flex;flex-direction:column;gap:.65rem">
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#10B981;flex-shrink:0">✓</span>Conexión a base Access via ODBC + transformación Power Query</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#10B981;flex-shrink:0">✓</span>Cálculo de OTIF (On Time In Full) desagregado por ruta, chofer y cliente</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#10B981;flex-shrink:0">✓</span>Dashboard de operaciones con mapa de calor de incidencias por zona</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#10B981;flex-shrink:0">✓</span>Análisis de causas de falla: faltante, retraso, rechazo, cancelación</div>
+          <div style="display:flex;gap:.75rem;font-size:.875rem;color:rgba(255,255,255,.7)"><span style="color:#10B981;flex-shrink:0">✓</span>Scorecard de clientes ancla con alertas de SLA en riesgo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="max-width:680px">
+      <div class="dashboard-mockup">
+        <div class="dash-header">
+          <div class="dash-dot" style="background:#FF5F57"></div>
+          <div class="dash-dot" style="background:#FFBD2E"></div>
+          <div class="dash-dot" style="background:#28C840"></div>
+          <span class="dash-title">OTIF · 35 Rutas · Semana actual</span>
+        </div>
+        <div class="dash-kpi-row">
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#4ADE80">95%</div>
+            <div class="dash-kpi-lbl">OTIF global</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#F87171">2</div>
+            <div class="dash-kpi-lbl">Rutas en riesgo</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="dash-kpi-val" style="color:#10B981">$0</div>
+            <div class="dash-kpi-lbl">Penalizaciones</div>
+          </div>
+        </div>
+        <div class="dash-bars">
+          <div class="dash-bar" style="background:#10B981;height:71%"></div>
+          <div class="dash-bar" style="background:#10B981;height:75%"></div>
+          <div class="dash-bar" style="background:#FBBF24;height:82%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:88%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:92%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:94%"></div>
+          <div class="dash-bar" style="background:#4ADE80;height:95%"></div>
+        </div>
+        <div style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:.5rem">OTIF semanal histórico (tendencia de mejora)</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <div class="case-results-grid reveal">
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#10B981">71% → 95%</div>
+          <div class="case-result-lbl">OTIF alcanzado en 90 días</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#4ADE80">$380K</div>
+          <div class="case-result-lbl">MXN/año en penalizaciones eliminadas</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">-68%</div>
+          <div class="case-result-lbl">Reducción en incidencias de entrega</div>
+        </div>
+        <div class="case-result-item">
+          <div class="case-result-num" style="color:#F2A900">2 contratos</div>
+          <div class="case-result-lbl">Nuevos clientes ancla ganados</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-quote reveal" style="margin-top:2.5rem;max-width:680px">
+      "El dashboard nos mostró que una sola ruta en zona norte generaba el 40% de las penalizaciones. En dos semanas rediseñamos esa ruta y los números cambiaron radicalmente. Sin los datos, hubiéramos tardado años en verlo."
+      <div class="case-quote-author">— <strong>Director de Operaciones</strong> · Distribuidora B2B · Estado de México</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-section" aria-labelledby="casos-cta-title">
+  <div style="position:relative;z-index:1">
+    <p class="cta-lead">¿Reconoció algún problema de su empresa en estos casos?</p>
+    <h2 class="cta-title" id="casos-cta-title">
+      Empecemos con un diagnóstico<br>honesto de su situación.
+    </h2>
+    <ul class="cta-checks">
+      <li>Sin compromisos. Sin precio fijo de entrada.</li>
+      <li>Le decimos qué datos necesita y cómo obtenerlos.</li>
+      <li>Propuesta formal a las 48 horas del diagnóstico.</li>
+    </ul>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="contacto.html" class="btn btn-primary btn-lg">Agendar diagnóstico gratuito →</a>
+      <a href="servicios.html" class="btn btn-outline btn-lg">Ver catálogo de servicios</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Data Consulting<span>.</span></div>
+        <div class="footer-tagline">Inteligencia de Negocios · Power BI · Capacitación</div>
+      </div>
+      <nav class="footer-links" aria-label="Navegación secundaria">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="casos.html">Casos</a>
+        <a href="demo.html">Demo</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="nosotros.html">Quiénes Somos</a>
+        <a href="notebooks.html">Notebooks</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="yr"></span> Iván Aguilera. Todos los derechos reservados.</span>
+      <span>Hecho con ♥ en México</span>
+    </div>
+  </div>
+</footer>
+
+<a class="floating-cta"
+   href="https://wa.me/524622078596?text=Hola%2C%20vi%20los%20casos%20de%20%C3%A9xito%20en%20su%20sitio%20y%20me%20interesa%20hablar%20sobre%20mi%20industria."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+<script src="js/interactivo.js"></script>
+<script>document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());</script>
+</body>
+</html>
