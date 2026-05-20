@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso de Privacidad — Data Consulting</title>
+  <meta name="description" content="Aviso de Privacidad de Data Consulting. Conoce cómo tratamos y protegemos tus datos personales conforme a la LFPDPPP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/moderno.css">
+  <link rel="icon" type="image/png" href="assets/tab-dc-logo.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/tab-dc-logo.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="assets/tab-dc-logo.png" sizes="180x180">
+  <style>
+    .privacy-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 5rem;
+      color: var(--brand-text);
+    }
+    .privacy-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .privacy-badge {
+      background: rgba(242,169,0,.12);
+      border: 1px solid rgba(242,169,0,.3);
+      color: #b87d00;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .3rem .75rem;
+      border-radius: 999px;
+    }
+    .privacy-date {
+      font-size: .85rem;
+      color: var(--brand-slate);
+    }
+    .privacy-toc {
+      background: #F1F5F9;
+      border-left: 3px solid var(--brand-gold);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .privacy-toc h3 {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--brand-slate);
+      margin: 0 0 .75rem;
+    }
+    .privacy-toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: .35rem;
+    }
+    .privacy-toc li a {
+      font-size: .9rem;
+      color: var(--brand-navy);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .privacy-toc li a:hover { color: var(--brand-gold); }
+    .privacy-section {
+      padding: 0;
+      margin-bottom: 2.75rem;
+      scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+    }
+    .privacy-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand-navy);
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: .6rem;
+      margin-bottom: 1.1rem;
+    }
+    .privacy-section h2 .section-num {
+      color: var(--brand-gold);
+      margin-right: .4rem;
+    }
+    .privacy-section p {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      color: #334155;
+    }
+    .privacy-section ul,
+    .privacy-section ol {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+      display: grid;
+      gap: .4rem;
+    }
+    .privacy-section li {
+      font-size: .975rem;
+      line-height: 1.7;
+      color: #334155;
+    }
+    .privacy-subsection-label {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--brand-slate);
+      margin: 1.25rem 0 .5rem;
+    }
+    .privacy-highlight {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .privacy-highlight strong {
+      color: var(--brand-navy);
+    }
+    .privacy-contact-card {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      background: var(--brand-dark);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+    .privacy-contact-card .contact-row {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .95rem;
+      color: rgba(255,255,255,.85);
+    }
+    .privacy-contact-card .contact-label {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+      min-width: 80px;
+    }
+    .privacy-contact-card a {
+      color: rgba(255,255,255,.9);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(242,169,0,.4);
+      padding-bottom: 1px;
+      transition: border-color .2s;
+    }
+    .privacy-contact-card a:hover { border-color: var(--brand-gold); }
+    .privacy-no-transfer {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .privacy-no-transfer .icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+    .privacy-no-transfer p {
+      margin: 0;
+      font-size: .95rem;
+      color: #166534;
+    }
+    .privacy-inai {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      font-size: .95rem;
+      color: #1E40AF;
+      line-height: 1.6;
+    }
+    .privacy-inai a {
+      color: #1D4ED8;
+      font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      .privacy-body { padding: 2rem 1.25rem 4rem; }
+      .privacy-section h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress-bar" id="scrollProgress" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Menú principal">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo" aria-label="Logo" style="padding:5px">
+        <img src="assets/dc-logo.png" alt="Logo Data Consulting" style="width:100%;height:100%;object-fit:contain">
+      </div>
+      <span class="nav-name">Data Consulting<span>.</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="casos.html">Casos</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="nosotros.html">Quiénes Somos</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contáctanos →</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO (dark) -->
+<header style="background:var(--brand-dark);padding:calc(var(--nav-height) + 3rem) 2rem 3rem;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 100% 0%,rgba(26,58,92,.5),transparent);pointer-events:none"></div>
+  <div style="max-width:800px;margin:0 auto;position:relative;z-index:1">
+    <p class="section-tag" style="margin-bottom:1rem;text-align:left">Legal</p>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;color:#fff;line-height:1.15;margin:0 0 1rem">
+      Aviso de Privacidad
+    </h1>
+    <p style="color:rgba(255,255,255,.65);font-size:1rem;max-width:560px;line-height:1.65;margin:0">
+      Nos comprometemos con la protección de sus datos personales conforme a la
+      <strong style="color:rgba(255,255,255,.85)">Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>
+      y su Reglamento.
+    </p>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<main>
+  <div class="privacy-body">
+
+    <!-- Meta -->
+    <div class="privacy-meta">
+      <span class="privacy-badge">LFPDPPP · México</span>
+      <span class="privacy-date">Última actualización: 19 de mayo de 2026</span>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="privacy-toc" aria-label="Índice del aviso de privacidad">
+      <h3>Contenido</h3>
+      <ol>
+        <li><a href="#responsable">Identidad y domicilio del Responsable</a></li>
+        <li><a href="#datos">Datos personales que recabamos</a></li>
+        <li><a href="#finalidades">Finalidades del tratamiento</a></li>
+        <li><a href="#transferencias">Transferencias de datos personales</a></li>
+        <li><a href="#arco">Derechos ARCO y cómo ejercerlos</a></li>
+        <li><a href="#revocacion">Revocación del consentimiento</a></li>
+        <li><a href="#limitacion">Opciones para limitar el uso de sus datos</a></li>
+        <li><a href="#cookies">Uso de cookies y tecnologías de rastreo</a></li>
+        <li><a href="#cambios">Cambios al aviso de privacidad</a></li>
+        <li><a href="#inai">Autoridad competente</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Responsable -->
+    <section class="privacy-section" id="responsable">
+      <h2><span class="section-num">1.</span>Identidad y domicilio del Responsable</h2>
+      <p>
+        <strong>Ivan Abelardo Aguilera Álvarez</strong> (en adelante "el Responsable"), con domicilio en
+        Irapuato, Guanajuato, México, operando bajo el nombre comercial <strong>Data Consulting</strong>,
+        es responsable del tratamiento de los datos personales que usted proporcione a través del sitio web
+        <strong>dataconsulting.mx</strong> y de cualquier comunicación establecida con nuestra empresa.
+      </p>
+      <p>
+        El Responsable cumple con las disposiciones de la <em>Ley Federal de Protección de Datos Personales
+        en Posesión de los Particulares</em> (LFPDPPP), su Reglamento y los Lineamientos del Aviso de Privacidad
+        emitidos por el Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos
+        Personales (INAI).
+      </p>
+    </section>
+
+    <!-- 2. Datos -->
+    <section class="privacy-section" id="datos">
+      <h2><span class="section-num">2.</span>Datos personales que recabamos</h2>
+      <p>
+        Para llevar a cabo las finalidades descritas en este aviso, podemos recabar las siguientes categorías
+        de datos personales:
+      </p>
+      <p class="privacy-subsection-label">Datos de identificación y contacto</p>
+      <ul>
+        <li>Nombre completo</li>
+        <li>Correo electrónico</li>
+        <li>Número de teléfono o WhatsApp</li>
+        <li>Nombre de la empresa o negocio al que pertenece</li>
+        <li>Cargo o puesto que desempeña</li>
+      </ul>
+      <p class="privacy-subsection-label">Datos generados por la comunicación</p>
+      <ul>
+        <li>Contenido de mensajes enviados a través del formulario de contacto de este sitio</li>
+        <li>Comunicaciones realizadas por correo electrónico o WhatsApp</li>
+        <li>Información que comparta voluntariamente durante sesiones de diagnóstico o llamadas de consulta</li>
+      </ul>
+      <p class="privacy-subsection-label">Datos operacionales y financieros compartidos para la prestación del servicio</p>
+      <p style="font-size:.95rem;color:#334155;line-height:1.7;margin-bottom:.75rem">
+        En el marco de proyectos de consultoría en Business Intelligence, el cliente puede proporcionarnos
+        acceso a información empresarial que contenga datos personales de terceros, incluyendo:
+      </p>
+      <ul>
+        <li>Registros contables con datos identificables (ingresos, egresos, gastos por persona o área)</li>
+        <li>Información de nómina o remuneraciones vinculada a empleados identificados</li>
+        <li>Bases de datos de clientes o proveedores con información de personas físicas</li>
+        <li>Registros de ventas, compras u operaciones que identifiquen a personas naturales</li>
+      </ul>
+      <div class="privacy-highlight">
+        Esta información se trata <strong>exclusivamente para ejecutar el servicio contratado</strong> y bajo
+        estricta confidencialidad. El Responsable no utilizará dichos datos para ninguna finalidad distinta
+        a la acordada, ni los conservará más allá del plazo necesario para completar el proyecto, salvo
+        obligación legal en contrario.
+      </div>
+      <div class="privacy-highlight">
+        <strong>Datos personales sensibles:</strong> No recabamos datos personales sensibles (como información
+        sobre salud, biometría, vida sexual, origen racial o étnico, creencias religiosas, filosóficas o morales,
+        afiliación sindical u opiniones políticas) a través de ninguno de nuestros canales de contacto.
+      </div>
+    </section>
+
+    <!-- 3. Finalidades -->
+    <section class="privacy-section" id="finalidades">
+      <h2><span class="section-num">3.</span>Finalidades del tratamiento</h2>
+      <p>
+        Sus datos personales serán tratados para las siguientes finalidades:
+      </p>
+      <p class="privacy-subsection-label">Finalidades primarias — necesarias para la relación</p>
+      <ul>
+        <li>Atender sus consultas, solicitudes de información y/o cotización de servicios</li>
+        <li>Agendar y llevar a cabo sesiones de diagnóstico gratuitas, demostraciones o llamadas de seguimiento</li>
+        <li>Dar cumplimiento a contratos de prestación de servicios de consultoría en Business Intelligence y Power BI</li>
+        <li>Procesar, modelar y analizar información financiera y operacional del cliente (ingresos, egresos, gastos, ventas, nómina u otros datos empresariales) con el único propósito de construir los modelos de datos, reportes e indicadores acordados en el proyecto</li>
+        <li>Emitir propuestas comerciales, documentos contractuales y comprobantes relacionados con los servicios contratados</li>
+        <li>Brindar soporte y atención durante y después de la implementación de proyectos</li>
+      </ul>
+      <p class="privacy-subsection-label">Finalidades secundarias — puede oponerse a ellas</p>
+      <ul>
+        <li>Enviarle información sobre nuevos servicios, actualizaciones o promociones de Data Consulting</li>
+        <li>Compartir contenido educativo relacionado con Business Intelligence, Power BI y análisis de datos</li>
+        <li>Realizar encuestas de satisfacción o estudios sobre la calidad de nuestros servicios</li>
+      </ul>
+      <div class="privacy-highlight">
+        Si no desea que sus datos sean utilizados para las <strong>finalidades secundarias</strong>, puede
+        manifestar su negativa enviando un correo a
+        <a href="mailto:ivan@dataconsulting.mx">ivan@dataconsulting.mx</a> con el asunto
+        <strong>"Oposición a finalidades secundarias"</strong>. La negativa no afectará la prestación de
+        los servicios que haya contratado o solicitado.
+      </div>
+    </section>
+
+    <!-- 4. Transferencias -->
+    <section class="privacy-section" id="transferencias">
+      <h2><span class="section-num">4.</span>Transferencias de datos personales</h2>
+      <div class="privacy-no-transfer">
+        <span class="icon">✅</span>
+        <p>
+          Sus datos personales <strong>no serán transferidos, vendidos ni cedidos</strong> a terceros sin
+          su consentimiento previo, salvo en los casos previstos en el artículo 37 de la LFPDPPP, es decir,
+          cuando la transferencia sea requerida por autoridad competente o derivada de una obligación legal.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. ARCO -->
+    <section class="privacy-section" id="arco">
+      <h2><span class="section-num">5.</span>Derechos ARCO y cómo ejercerlos</h2>
+      <p>
+        Usted tiene derecho en todo momento a ejercer los siguientes derechos respecto de sus datos personales:
+      </p>
+      <ul>
+        <li><strong>Acceso:</strong> conocer qué datos personales tenemos de usted, cómo los tratamos y para qué los usamos.</li>
+        <li><strong>Rectificación:</strong> solicitar la corrección de sus datos cuando sean inexactos, incompletos o desactualizados.</li>
+        <li><strong>Cancelación:</strong> solicitar la supresión de sus datos de nuestros registros cuando considere que no son necesarios para las finalidades del tratamiento.</li>
+        <li><strong>Oposición:</strong> oponerse al tratamiento de sus datos para finalidades específicas, en particular las de carácter secundario.</li>
+      </ul>
+      <p>Para ejercer cualquiera de los derechos ARCO, envíe su solicitud a:</p>
+      <div class="privacy-contact-card">
+        <div class="contact-row">
+          <span class="contact-label">Correo</span>
+          <a href="mailto:ivan@dataconsulting.mx">ivan@dataconsulting.mx</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Asunto</span>
+          <span>"Solicitud ARCO — [Derecho que desea ejercer]"</span>
+        </div>
+      </div>
+      <p class="privacy-subsection-label">Información que debe incluir su solicitud</p>
+      <ul>
+        <li>Nombre completo y datos de contacto (correo electrónico y/o teléfono)</li>
+        <li>Descripción clara y precisa del derecho que desea ejercer</li>
+        <li>Documentos o información que faciliten la localización de sus datos (ej. fecha aproximada de contacto)</li>
+      </ul>
+      <p>
+        El Responsable dará respuesta a su solicitud en un plazo máximo de <strong>20 días hábiles</strong>
+        contados a partir de su recepción. De ser procedente, los cambios se harán efectivos en los siguientes
+        15 días hábiles. El plazo de respuesta puede ampliarse en los términos previstos por la LFPDPPP.
+      </p>
+    </section>
+
+    <!-- 6. Revocación -->
+    <section class="privacy-section" id="revocacion">
+      <h2><span class="section-num">6.</span>Revocación del consentimiento</h2>
+      <p>
+        Usted puede revocar en cualquier momento el consentimiento que haya otorgado para el tratamiento
+        de sus datos personales. Para hacerlo, envíe un correo a
+        <a href="mailto:ivan@dataconsulting.mx">ivan@dataconsulting.mx</a> con el asunto
+        <strong>"Revocación de consentimiento"</strong>, indicando los datos de contacto que desea que
+        sean eliminados de nuestros registros.
+      </p>
+      <p>
+        Tenga en cuenta que la revocación del consentimiento puede limitar nuestra capacidad para
+        prestarle servicios que haya contratado. En ningún caso la revocación tendrá efectos retroactivos
+        sobre el tratamiento realizado antes de su solicitud.
+      </p>
+    </section>
+
+    <!-- 7. Limitación -->
+    <section class="privacy-section" id="limitacion">
+      <h2><span class="section-num">7.</span>Opciones para limitar el uso de sus datos</h2>
+      <p>
+        Además del ejercicio de los derechos ARCO y la revocación del consentimiento, puede limitar
+        el uso de sus datos personales mediante las siguientes acciones:
+      </p>
+      <ul>
+        <li>Solicitar ser excluido de envíos de correo electrónico de carácter comercial o informativo,
+            enviando un correo a <a href="mailto:ivan@dataconsulting.mx">ivan@dataconsulting.mx</a> con
+            el asunto <strong>"Baja de comunicaciones"</strong>.</li>
+        <li>Inscribirse en el Registro Público para Evitar Publicidad (REPEP) administrado por la
+            Procuraduría Federal del Consumidor (PROFECO) en
+            <a href="https://repep.profeco.gob.mx" target="_blank" rel="noopener noreferrer">repep.profeco.gob.mx</a>.</li>
+      </ul>
+    </section>
+
+    <!-- 8. Cookies -->
+    <section class="privacy-section" id="cookies">
+      <h2><span class="section-num">8.</span>Uso de cookies y tecnologías de rastreo</h2>
+      <p>
+        Este sitio web puede utilizar <strong>cookies de sesión</strong> con el único propósito de
+        mejorar la experiencia de navegación (por ejemplo, mantener preferencias durante la visita).
+        Estas cookies:
+      </p>
+      <ul>
+        <li>No recopilan datos personales identificables</li>
+        <li>Expiran automáticamente al cerrar el navegador</li>
+        <li>No se comparten con terceros</li>
+      </ul>
+      <p>
+        Puede deshabilitar el uso de cookies en cualquier momento desde la configuración de su navegador
+        sin que ello afecte el funcionamiento general del sitio.
+      </p>
+    </section>
+
+    <!-- 9. Cambios -->
+    <section class="privacy-section" id="cambios">
+      <h2><span class="section-num">9.</span>Cambios al aviso de privacidad</h2>
+      <p>
+        El Responsable se reserva el derecho de actualizar o modificar el presente aviso de privacidad
+        en cualquier momento para adaptarlo a cambios legislativos, jurisprudenciales o en los servicios
+        ofrecidos. Cualquier modificación será publicada en esta misma página:
+      </p>
+      <div class="privacy-highlight" style="font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--brand-navy)">
+        dataconsulting.mx/aviso-privacidad.html
+      </div>
+      <p>
+        Le recomendamos consultar periódicamente este aviso. El uso continuado de los servicios de
+        Data Consulting tras la publicación de cambios implica la aceptación de los mismos.
+      </p>
+    </section>
+
+    <!-- 10. INAI -->
+    <section class="privacy-section" id="inai">
+      <h2><span class="section-num">10.</span>Autoridad competente</h2>
+      <p>
+        Si considera que sus derechos han sido vulnerados por el tratamiento de sus datos personales,
+        tiene derecho de acudir directamente al:
+      </p>
+      <div class="privacy-inai">
+        <strong>Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)</strong><br>
+        Sitio web: <a href="https://www.inai.org.mx" target="_blank" rel="noopener noreferrer">www.inai.org.mx</a><br>
+        El INAI es la autoridad responsable de supervisar el cumplimiento de la LFPDPPP en México.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Data Consulting<span>.</span></div>
+        <div class="footer-tagline">Inteligencia de Negocios · Power BI · Capacitación</div>
+      </div>
+      <nav class="footer-links" aria-label="Navegación secundaria">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="casos.html">Casos</a>
+        <a href="demo.html">Demo</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="nosotros.html">Quiénes Somos</a>
+        <a href="notebooks.html">Notebooks</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="aviso-privacidad.html" aria-current="page">Aviso de Privacidad</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="yr"></span> Iván Aguilera. Todos los derechos reservados.</span>
+      <span>Hecho con ♥ en México</span>
+    </div>
+  </div>
+</footer>
+
+<a class="floating-cta"
+   href="https://wa.me/524622078596?text=Hola%2C%20vi%20su%20sitio%20y%20tengo%20preguntas%20sobre%20sus%20servicios%20de%20Power%20BI."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+<script src="js/interactivo.js"></script>
+<script>document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());</script>
+</body>
+</html>
