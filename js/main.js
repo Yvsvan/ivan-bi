@@ -11,10 +11,12 @@ const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 toggle?.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  const isOpen = navLinks.classList.contains('open');
+  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   const bars = toggle.querySelectorAll('span');
-  bars[0].style.transform = navLinks.classList.contains('open') ? 'rotate(45deg) translate(5px, 5px)' : '';
-  bars[1].style.opacity   = navLinks.classList.contains('open') ? '0' : '1';
-  bars[2].style.transform = navLinks.classList.contains('open') ? 'rotate(-45deg) translate(5px, -5px)' : '';
+  bars[0].style.transform = isOpen ? 'rotate(45deg) translate(5px, 5px)' : '';
+  bars[1].style.opacity   = isOpen ? '0' : '1';
+  bars[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px, -5px)' : '';
 });
 navLinks?.querySelectorAll('a').forEach(a =>
   a.addEventListener('click', () => navLinks.classList.remove('open'))
@@ -144,7 +146,7 @@ function loadExternalNb(path) {
       const item = document.createElement('div');
       item.className = 'nb-item';
       item.innerHTML = `
-        <div class="nb-item-icon">📓</div>
+        <div class="nb-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
         <div>
           <div class="nb-item-name">${nb.name}</div>
           <div class="nb-item-meta">${nb.size}  ·  ${nb.date}</div>

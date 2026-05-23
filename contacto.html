@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
+  <title>Contacto · Data Consulting</title>
   <meta name="description" content="Agenda tu diagnóstico gratuito de 30 minutos. Sin compromiso.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contacto · Data Consulting">
+  <meta property="og:description" content="Agenda un diagnóstico gratuito de 30 minutos. Analizamos sus datos y le decimos exactamente qué implementar.">
+  <meta property="og:url" content="https://dataconsulting.mx/contacto.html">
+  <meta property="og:image" content="https://dataconsulting.mx/assets/dc-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto · Data Consulting">
+  <meta name="twitter:description" content="Agenda un diagnóstico gratuito de 30 minutos. Sin compromiso.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -75,7 +83,7 @@
           <div class="form-group">
             <label class="form-label" for="contact-nombre">Nombre completo *</label>
             <input class="form-control" type="text" id="contact-nombre" name="nombre"
-                   placeholder="Ej. María González" required autocomplete="name">
+                   placeholder="Ej. María González" required aria-required="true" autocomplete="name">
           </div>
           <div class="form-group">
             <label class="form-label" for="contact-empresa">Empresa</label>
@@ -85,7 +93,7 @@
           <div class="form-group">
             <label class="form-label" for="contact-email">Correo electrónico *</label>
             <input class="form-control" type="email" id="contact-email" name="email"
-                   placeholder="correo@empresa.com" required autocomplete="email">
+                   placeholder="correo@empresa.com" required aria-required="true" autocomplete="email">
           </div>
           <div class="form-group">
             <label class="form-label" for="contact-telefono">Teléfono (opcional)</label>
@@ -96,12 +104,12 @@
             <label class="form-label" for="contact-servicio">Servicio de interés</label>
             <select class="form-control" id="contact-servicio" name="servicio">
               <option value="">Seleccione una opción…</option>
-              <option value="pulso">⚡ Pulso — $5K–$9K MXN</option>
-              <option value="express">🚀 Reporte Express — $15K–$25K MXN</option>
-              <option value="starter">🌱 Starter — $40K–$70K MXN</option>
-              <option value="professional">⭐ Professional — $80K–$140K MXN</option>
-              <option value="capacitacion">🎓 Capacitación in-company</option>
-              <option value="retainer">🔄 Retainer mensual</option>
+              <option value="pulso">Pulso — $5K–$9K MXN</option>
+              <option value="express">Reporte Express — $15K–$25K MXN</option>
+              <option value="starter">Starter — $40K–$70K MXN</option>
+              <option value="professional">Professional — $80K–$140K MXN</option>
+              <option value="capacitacion">Capacitación in-company</option>
+              <option value="retainer">Retainer mensual</option>
               <option value="no-se">No sé cuál necesito — quiero orientación</option>
             </select>
           </div>
@@ -120,7 +128,7 @@
             <label class="form-label" for="contact-mensaje">Mensaje *</label>
             <textarea class="form-control" id="contact-mensaje" name="mensaje" rows="5"
                       placeholder="Cuéntenos brevemente su situación actual y qué le gustaría lograr con Power BI…"
-                      required style="resize:vertical"></textarea>
+                      required aria-required="true" style="resize:vertical"></textarea>
           </div>
         </div>
         <div style="margin-top:1.5rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap">
@@ -131,6 +139,7 @@
             Sus datos son confidenciales y nunca serán compartidos con terceros.
           </p>
         </div>
+        <div id="form-feedback" role="status" aria-live="polite" style="margin-top:1rem;font-size:.875rem"></div>
       </form>
     </div>
   </div>

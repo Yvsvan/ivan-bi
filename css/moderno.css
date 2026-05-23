@@ -1531,3 +1531,33 @@ select.form-control { cursor: pointer; }
   font-size: 0.7rem;
   color: rgba(255,255,255,.25);
 }
+
+/* ── SVG icon sizing for card icons ─────────────────────────────── */
+.ind-card-icon svg,
+.promise-card-icon svg {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+.ind-card-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+}
+.promise-card-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ── prefers-reduced-motion (moderno) ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .floating-cta { animation: none; }
+  .scroll-progress-bar { animation: none; }
+  .typewriter-text::after { animation: none; opacity: 1; }
+  .hero-badge::before { animation: none; }
+}
