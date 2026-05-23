@@ -1293,14 +1293,14 @@ select.form-control { cursor: pointer; }
 /* ── Sección ¿Le suena familiar? ────────────────────────────── */
 .section-familiar {
   background: #F8FAFC;
-  padding: 5rem 2rem;
+  padding: 3.5rem 2rem;
 }
 
 .familiar-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .familiar-card {
@@ -1361,7 +1361,7 @@ select.form-control { cursor: pointer; }
 .familiar-close {
   text-align: center;
   max-width: 560px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   padding-top: 1rem;
 }
 .familiar-close-text {
@@ -1404,7 +1404,7 @@ select.form-control { cursor: pointer; }
 /* ── Sección Promesa ─────────────────────────────────────────── */
 .section-promise {
   background: var(--brand-white);
-  padding: 5rem 2rem;
+  padding: 3.5rem 2rem;
 }
 
 .promise-grid {
