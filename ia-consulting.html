@@ -44,6 +44,7 @@
     <span class="t-label">Servicio · IA Consulting</span>
     <h1 class="t-h1">Inteligencia artificial integrada en tu operación.</h1>
     <p class="t-body-lg">Identifico dónde la IA genera el mayor impacto en tu empresa e implemento soluciones concretas: agentes, flujos inteligentes y modelos de lenguaje adaptados a tu contexto.</p>
+    <div class="hero-line" id="hero-line"></div>
   </div>
 </header>
 
@@ -168,6 +169,10 @@
     toggle.setAttribute('aria-expanded', String(open));
   });
   document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
+  (function() {
+    const line = document.getElementById('hero-line');
+    if (line) setTimeout(() => line.classList.add('active'), 500);
+  })();
 </script>
 </body>
 </html>

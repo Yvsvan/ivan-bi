@@ -44,6 +44,7 @@
     <span class="t-label">Servicio · Automatización de Procesos</span>
     <h1 class="t-h1">Automatiza lo repetitivo, libera lo valioso.</h1>
     <p class="t-body-lg">Mapeo los procesos que consumen tiempo innecesario de tu equipo e implemento flujos automáticos que los eliminan — sin cambiar las herramientas que ya usas.</p>
+    <div class="hero-line" id="hero-line"></div>
   </div>
 </header>
 
@@ -168,6 +169,10 @@
     toggle.setAttribute('aria-expanded', String(open));
   });
   document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
+  (function() {
+    const line = document.getElementById('hero-line');
+    if (line) setTimeout(() => line.classList.add('active'), 500);
+  })();
 </script>
 </body>
 </html>

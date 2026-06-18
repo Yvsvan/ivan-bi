@@ -40,6 +40,7 @@
 
 <!-- HERO -->
 <section class="hero">
+  <canvas class="hero-neural" id="hero-neural" aria-hidden="true"></canvas>
   <div class="container">
     <span class="t-label">Consultoría Tecnológica · México</span>
     <h1 class="t-h1">Tecnología que trabaja<br>para tu empresa.</h1>
@@ -49,6 +50,7 @@
       <a href="https://wa.me/524622078596?text=Hola%2C%20me%20interesa%20agendar%20una%20llamada%20de%20diagn%C3%B3stico%20gratuita." target="_blank" rel="noopener" class="btn btn-light">Agendar diagnóstico gratuito →</a>
       <a href="#servicios" class="btn btn-outline-light">Ver servicios</a>
     </div>
+    <div class="hero-line" id="hero-line"></div>
   </div>
 </section>
 
@@ -177,6 +179,7 @@
 </a>
 
 <script>
+  // Nav
   const toggle = document.getElementById('navToggle');
   const links  = document.getElementById('navLinks');
   toggle.addEventListener('click', () => {
@@ -184,6 +187,109 @@
     toggle.setAttribute('aria-expanded', String(open));
   });
   document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
+
+  // Neural network
+  (function() {
+    const canvas = document.getElementById('hero-neural');
+    if (!canvas) return;
+    const ctx  = canvas.getContext('2d');
+    const hero = document.querySelector('.hero');
+    const NODES = 44, MAX_D = 148;
+
+    canvas.width  = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+
+    const nodes = Array.from({ length: NODES }, () => ({
+      x:  Math.random() * canvas.width,
+      y:  Math.random() * canvas.height,
+      vx: (Math.random() - .5) * .38,
+      vy: (Math.random() - .5) * .38,
+      r:  Math.random() * 1.8 + .7,
+      p:  Math.random() * Math.PI * 2
+    }));
+
+    window.addEventListener('resize', () => {
+      canvas.width  = hero.offsetWidth;
+      canvas.height = hero.offsetHeight;
+      nodes.forEach(n => {
+        n.x = Math.random() * canvas.width;
+        n.y = Math.random() * canvas.height;
+      });
+    }, { passive: true });
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      nodes.forEach(n => {
+        n.x += n.vx; n.y += n.vy; n.p += .02;
+        if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
+        if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+      });
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const d  = Math.sqrt(dx * dx + dy * dy);
+          if (d < MAX_D) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(129,140,248,${(1 - d / MAX_D) * .17})`;
+            ctx.lineWidth   = .7;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      nodes.forEach(n => {
+        const pulse = (Math.sin(n.p) + 1) * .5;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r + pulse * .9, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(129,140,248,${.25 + pulse * .38})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  // Typewriter
+  (function() {
+    const h1   = document.querySelector('.hero .t-h1');
+    if (!h1) return;
+    const text = 'Tecnología que trabaja§para tu empresa.';
+    h1.innerHTML = '';
+    let i = 0;
+    function type() {
+      if (i > text.length) return;
+      h1.innerHTML = text.slice(0, i).replace('§', '<br>') +
+        (i < text.length ? '<span class="tw-cursor" aria-hidden="true"></span>' : '');
+      i++;
+      setTimeout(type, i < 10 ? 100 : 52);
+    }
+    setTimeout(type, 250);
+  })();
+
+  // Hero line
+  (function() {
+    const line = document.getElementById('hero-line');
+    if (line) setTimeout(() => line.classList.add('active'), 950);
+  })();
+
+  // Card tilt
+  (function() {
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mousemove', function(e) {
+        const r  = this.getBoundingClientRect();
+        const rx = -(e.clientY - r.top  - r.height / 2) / (r.height / 2) * 5;
+        const ry =  (e.clientX - r.left - r.width  / 2) / (r.width  / 2) * 5;
+        this.style.transition = 'background .15s';
+        this.style.transform  = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      });
+      card.addEventListener('mouseleave', function() {
+        this.style.transition = 'background .15s, transform .45s ease';
+        this.style.transform  = '';
+      });
+    });
+  })();
 </script>
 </body>
 </html>

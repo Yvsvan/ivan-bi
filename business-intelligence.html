@@ -44,6 +44,7 @@
     <span class="t-label">Servicio · Business Intelligence</span>
     <h1 class="t-h1">Decisiones basadas en datos, no en corazonadas.</h1>
     <p class="t-body-lg">Construyo modelos de datos limpios y dashboards interactivos en Power BI para que tu equipo tenga visibilidad real de la operación — sin depender de reportes manuales en Excel.</p>
+    <div class="hero-line" id="hero-line"></div>
   </div>
 </header>
 
@@ -168,6 +169,10 @@
     toggle.setAttribute('aria-expanded', String(open));
   });
   document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
+  (function() {
+    const line = document.getElementById('hero-line');
+    if (line) setTimeout(() => line.classList.add('active'), 500);
+  })();
 </script>
 </body>
 </html>
