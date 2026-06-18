@@ -154,6 +154,13 @@
   </div>
 </footer>
 
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <div class="sticky-cta-inner">
+    <a href="https://wa.me/524622078596?text=Hola%2C%20me%20interesa%20hablar%20sobre%20automatizaci%C3%B3n%20de%20procesos%20para%20mi%20empresa." target="_blank" rel="noopener" class="btn btn-light">Agendar llamada gratuita →</a>
+  </div>
+</div>
+
 <!-- WhatsApp float -->
 <a class="wa-float" href="https://wa.me/524622078596?text=Hola%2C%20vi%20su%20sitio%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true">
@@ -172,6 +179,48 @@
   (function() {
     const line = document.getElementById('hero-line');
     if (line) setTimeout(() => line.classList.add('active'), 500);
+  })();
+
+  // Scroll reveal
+  (function() {
+    if (!window.IntersectionObserver) return;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.section-heading, .deliverable, .process-step').forEach(el => {
+      el.classList.add('reveal'); io.observe(el);
+    });
+  })();
+
+  // Scroll progress bar
+  (function() {
+    const bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (total > 0) bar.style.width = (window.scrollY / total * 100) + '%';
+    }, { passive: true });
+  })();
+
+  // Sticky CTA (mobile)
+  (function() {
+    if (window.innerWidth >= 768) return;
+    const cta = document.getElementById('stickyCta');
+    if (!cta) return;
+    const hero = document.querySelector('.service-hero');
+    const footer = document.querySelector('.footer');
+    const waFloat = document.querySelector('.wa-float');
+    let visible = false;
+    window.addEventListener('scroll', () => {
+      const heroGone = hero ? hero.getBoundingClientRect().bottom < -50 : true;
+      const footerFar = footer ? footer.getBoundingClientRect().top > window.innerHeight * 0.6 : true;
+      const show = heroGone && footerFar;
+      if (show === visible) return;
+      visible = show;
+      cta.classList.toggle('visible', show);
+      if (waFloat) waFloat.style.bottom = show ? '80px' : '';
+    }, { passive: true });
   })();
 </script>
 </body>

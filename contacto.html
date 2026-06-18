@@ -162,6 +162,39 @@
       .form-grid  { grid-template-columns: 1fr; }
       .steps-grid { grid-template-columns: 1fr; }
     }
+
+    /* FAQ Accordion (mobile) */
+    @media (max-width: 768px) {
+      .faq-item { cursor: pointer; -webkit-user-select: none; user-select: none; }
+      .faq-q {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: .75rem;
+      }
+      .faq-q::after {
+        content: '+';
+        font-size: 1.375rem;
+        font-weight: 300;
+        color: var(--c-navy);
+        flex-shrink: 0;
+        line-height: 1.15;
+        transition: transform .25s;
+      }
+      .faq-item.open .faq-q::after { content: '−'; }
+      .faq-a {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0;
+        transition: max-height .35s cubic-bezier(.16,1,.3,1), opacity .3s, margin-top .3s;
+      }
+      .faq-item.open .faq-a {
+        max-height: 260px;
+        opacity: 1;
+        margin-top: .5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -507,6 +540,41 @@
   (function() {
     const line = document.getElementById('hero-line');
     if (line) setTimeout(() => line.classList.add('active'), 600);
+  })();
+
+  // Scroll reveal
+  (function() {
+    if (!window.IntersectionObserver) return;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.section-heading, .channel-card, .step-card, .faq-item').forEach(el => {
+      el.classList.add('reveal'); io.observe(el);
+    });
+  })();
+
+  // Scroll progress bar
+  (function() {
+    const bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (total > 0) bar.style.width = (window.scrollY / total * 100) + '%';
+    }, { passive: true });
+  })();
+
+  // FAQ accordion (mobile)
+  (function() {
+    if (window.innerWidth >= 768) return;
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('role', 'button');
+      item.addEventListener('click', () => item.classList.toggle('open'));
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.classList.toggle('open'); }
+      });
+    });
   })();
 </script>
 </body>
