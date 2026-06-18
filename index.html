@@ -3,697 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Consulting | Power BI para PYMEs mexicanas</title>
-  <meta name="description" content="Implementamos Power BI en su empresa. Sus datos están ahí — el problema es que nadie los puede ver cuando los necesita.">
+  <title>Data Consulting — IA, Automatización y Business Intelligence</title>
+  <meta name="description" content="Consultoría tecnológica en inteligencia artificial, automatización de procesos y business intelligence. Resultados en semanas, sin necesitar un equipo de TI.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Data Consulting | Power BI para PYMEs mexicanas">
-  <meta property="og:description" content="Implementamos Power BI para que su equipo deje de perseguir la información y empiece a usarla para tomar mejores decisiones, más rápido.">
+  <meta property="og:title" content="Data Consulting — IA, Automatización y Business Intelligence">
+  <meta property="og:description" content="Implemento soluciones de IA, automatización y BI para que tu equipo se enfoque en lo que importa.">
   <meta property="og:url" content="https://dataconsulting.mx/">
   <meta property="og:image" content="https://dataconsulting.mx/assets/dc-logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Data Consulting | Power BI para PYMEs mexicanas">
-  <meta name="twitter:description" content="Implementamos Power BI para que su equipo deje de perseguir la información y empiece a usarla para tomar mejores decisiones, más rápido.">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/moderno.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/nuevo.css">
   <link rel="icon" type="image/png" href="assets/tab-dc-logo.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="assets/tab-dc-logo.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="assets/tab-dc-logo.png" sizes="180x180">
+  <link rel="apple-touch-icon" href="assets/tab-dc-logo.png">
 </head>
 <body>
 
-<div class="scroll-progress-bar" id="scrollProgress" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
-
-<!-- ══════════════════════════════════════════════════════════════
-     NAVBAR
-     ══════════════════════════════════════════════════════════════ -->
-<nav class="navbar" role="navigation" aria-label="Menú principal">
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Menú principal">
   <div class="nav-inner">
-
-    <a href="index.html" class="nav-brand">
-      <div class="nav-logo" aria-label="Logo" style="padding: 5px;">
-      <img src="assets/dc-logo.png" alt="Logo Data Consulting" style="width:100%;height:100%;object-fit:contain">
-      </div>
-      <span class="nav-name">
-        Data Consulting<span>.</span>
-      </span>
+    <a href="index.html" class="nav-brand" aria-label="Data Consulting — Inicio">
+      <img src="assets/dc-logo.png" alt="Logo Data Consulting">
+      <span class="nav-brand-name">Data Consulting<span>.</span></span>
     </a>
-
-    <ul class="nav-links" role="list">
-      <li><a href="index.html" aria-current="page">Inicio</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="casos.html">Casos</a></li>
-      <li><a href="demo.html">Demo</a></li>
-      <li><a href="recursos.html">Recursos</a></li>
-      <li><a href="nosotros.html">Quiénes Somos</a></li>
-      <li><a href="contacto.html" class="nav-cta">Contáctanos →</a></li>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="ia-consulting.html">IA Consulting</a></li>
+      <li><a href="automatizacion.html">Automatización</a></li>
+      <li><a href="business-intelligence.html">Business Intelligence</a></li>
+      <!-- Update this link to your calendar URL (e.g. Calendly) -->
+      <li><a href="https://wa.me/524622078596?text=Hola%2C%20me%20interesa%20agendar%20una%20llamada%20de%20diagn%C3%B3stico." target="_blank" rel="noopener" class="nav-cta">Agendar llamada →</a></li>
     </ul>
-
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════════════════════════
-     HERO — NUEVO
-     ══════════════════════════════════════════════════════════════ -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-inner">
-
-    <div class="hero-badge">Consultoría Power BI · México</div>
-
-    <div class="hero-typewriter" aria-hidden="true" id="heroTypewriter">
-      <span class="typewriter-text"></span>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="t-label">Consultoría Tecnológica · México</span>
+    <h1 class="t-h1">Tecnología que trabaja<br>para tu empresa.</h1>
+    <p class="t-body-lg">Implemento soluciones de inteligencia artificial, automatización de procesos y business intelligence para que tu equipo se enfoque en lo que importa.</p>
+    <div class="hero-ctas">
+      <!-- Update this link to your calendar URL -->
+      <a href="https://wa.me/524622078596?text=Hola%2C%20me%20interesa%20agendar%20una%20llamada%20de%20diagn%C3%B3stico%20gratuita." target="_blank" rel="noopener" class="btn btn-light">Agendar diagnóstico gratuito →</a>
+      <a href="#servicios" class="btn btn-outline-light">Ver servicios</a>
     </div>
-
-    <h1 class="hero-title hero-title-hidden" id="hero-title">
-      Sus datos están ahí.<br>
-      El problema es que <em>nadie los puede ver</em><br>
-      cuando los necesita.
-    </h1>
-
-    <p class="hero-subtitle hero-subtitle-hidden">
-      Implementamos Power BI para que su equipo deje de perseguir la información —
-      y empiece a usarla para tomar mejores decisiones, más rápido.
-    </p>
-
-    <div class="hero-cta-group hero-cta-hidden">
-      <a href="contacto.html" class="btn btn-primary btn-lg">
-        Agendar Diagnóstico Gratuito
-      </a>
-      <a href="demo.html" class="btn btn-outline btn-lg">
-        Ver Demo en Vivo
-      </a>
-    </div>
-
-    <div class="hero-stats hero-stats-hidden">
-      <div class="stat-item">
-        <div class="stat-num">23×</div>
-        <div class="stat-lbl">más probabilidades de<br>adquirir nuevos clientes</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">12 sem</div>
-        <div class="stat-lbl">de implementación<br>completa</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">6-18m</div>
-        <div class="stat-lbl">tiempo de recuperación<br>de inversión</div>
-      </div>
-    </div>
-
-    <div class="hero-trust" aria-label="Industrias atendidas">
-      <span class="hero-trust-label">Para empresas de 20 a 200 empleados en:</span>
-      <div class="hero-trust-items">
-        <div class="hero-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v2H3zm0 8h18v2H3zm0 8h18v2H3z"/></svg>Retail</div>
-        <div class="hero-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20v2H2zm2-2V9l8-7 8 7v9H4zm2-2h12V10.4L12 4.8 6 10.4V16zm4-6h4v6h-4z"/></svg>Manufactura</div>
-        <div class="hero-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>Logística</div>
-        <div class="hero-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>Servicios Fin.</div>
-        <div class="hero-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>RR.HH.</div>
-        <div class="hero-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>Educación</div>
-        <div class="hero-trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.4 7h12.8M7 13L5.4 5M10 19.5a.5.5 0 11-1 0 .5.5 0 011 0zm7 0a.5.5 0 11-1 0 .5.5 0 011 0z"/></svg>E-commerce</div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     ¿LE SUENA FAMILIAR? + LA BRECHA
-     ══════════════════════════════════════════════════════════════ -->
-<section class="section-familiar" aria-labelledby="familiar-title">
-  <div class="section-inner">
-
-    <p class="section-tag">El día a día</p>
-    <h2 class="section-title" id="familiar-title">
-      ¿Le suena familiar?
-    </h2>
-    <p class="section-lead section-lead--center">
-      Estos no son problemas de tecnología. Son el resultado de crecer más rápido
-      que los sistemas de información que acompañaron ese crecimiento.
-    </p>
-
-    <div class="familiar-grid">
-
-      <div class="familiar-card reveal" data-audience="ceo">
-        <div class="familiar-card-role">Para el Director General</div>
-        <blockquote class="familiar-card-quote">
-          "Pedí el reporte de ventas del mes. Me lo mandaron el martes. Para el jueves
-          ya era información vieja."
-        </blockquote>
-        <div class="familiar-card-pain">Decisiones con datos de hace 30 días.</div>
-      </div>
-
-      <div class="familiar-card reveal reveal-delay-1" data-audience="director">
-        <div class="familiar-card-role">Para el Director de Área</div>
-        <blockquote class="familiar-card-quote">
-          "Cada junta empieza igual: 10 minutos discutiendo cuáles son los números
-          correctos porque cada área tiene su propio Excel."
-        </blockquote>
-        <div class="familiar-card-pain">Sin una sola fuente de verdad.</div>
-      </div>
-
-      <div class="familiar-card reveal reveal-delay-2" data-audience="director">
-        <div class="familiar-card-role">Para el Director de Área</div>
-        <blockquote class="familiar-card-quote">
-          "Mi analista más capaz pasa el 60% de su tiempo descargando, limpiando
-          y cruzando Excels. Para eso lo contraté."
-        </blockquote>
-        <div class="familiar-card-pain">Talento caro haciendo trabajo manual.</div>
-      </div>
-
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="section-heading">
+      <span class="t-label">Servicios</span>
+      <h2 class="t-h2">Tres áreas, un objetivo: hacer más con menos.</h2>
+      <p class="t-body">Cada servicio está diseñado para entregar resultados concretos, sin depender de equipos de TI internos ni de meses de implementación.</p>
     </div>
+    <div class="services-grid">
 
-    <div class="two-col" style="gap:1.25rem" aria-label="La brecha datos 2025">
-      <div class="gap-card gap-left reveal">
-        <div class="gap-card-num">91%</div>
-        <div class="gap-card-lbl">
-          de las empresas cree que tomar decisiones basadas en datos es crítico para su éxito.
-        </div>
-        <div class="gap-card-src">Data-Driven Decision Making Statistics 2025</div>
-        <div class="gap-badge gap-badge--success">
-          <strong>Saben que es crítico.</strong>
-          <small>Pero no tienen las herramientas para hacerlo.</small>
-        </div>
-      </div>
-      <div class="gap-card gap-right reveal reveal-delay-1">
-        <div class="gap-card-num">57%</div>
-        <div class="gap-card-lbl">
-          realmente toma decisiones basadas en datos en la práctica cotidiana.
-        </div>
-        <div class="gap-card-src">Data-Driven Decision Making Statistics 2025</div>
-        <div class="gap-badge gap-badge--danger">
-          <strong>34 puntos de brecha</strong>
-          <small>entre intención y realidad.</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="familiar-close reveal">
-      <p class="familiar-close-text">
-        Si reconoció al menos dos de estas situaciones, su empresa ya tiene
-        suficiente contexto para una conversación que vale la pena.
-      </p>
-      <a href="contacto.html" class="btn btn-primary">
-        Agendemos 30 minutos →
-      </a>
-    </div>
-
-    <details class="refs-details">
-      <summary>Fuentes bibliográficas</summary>
-      <ul>
-        <li><strong>McKinsey Global Institute</strong> — Analytics Comes of Age (mckinsey.com)</li>
-        <li><strong>Forrester Consulting / Collibra</strong> — Elevating the Role of the CDO, 900 líderes (collibra.com)</li>
-        <li><strong>Harvard Business Review / Google Cloud</strong> — Data Leaders Study, 2023, 366 ejecutivos (cloud.google.com)</li>
-        <li><strong>BARC Research</strong> — Big Data Analytics Survey (barc-research.com)</li>
-        <li><strong>passivesecrets.com</strong> — Data-Driven Decision Making Statistics 2025</li>
-      </ul>
-    </details>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════
-     CALCULADORA INTERACTIVA CON SLIDERS — REEMPLAZA LA ESTÁTICA
-     ══════════════════════════════════════════════════════════════ -->
-<section class="section-navy" aria-labelledby="costo-title">
-  <div class="section-inner">
-    <p class="section-tag">El Costo Operacional</p>
-    <h2 class="section-title light" id="costo-title">
-      Calcule lo que le cuesta no tener los datos en tiempo real
-    </h2>
-    <p style="color:rgba(255,255,255,.55);max-width:500px;margin:0 auto 2.5rem;text-align:center">
-      Ajuste los valores de su empresa y vea el costo real de preparar reportes manualmente.
-    </p>
-
-    <div class="roi-calc-hero reveal" id="roiCalc">
-      <div class="roi-inputs">
-
-        <div class="roi-input-group">
-          <label class="roi-label" for="roi-personas">
-            Personas que preparan reportes
-            <span class="roi-val-badge" id="badge-personas">3</span>
-          </label>
-          <input type="range" id="roi-personas" min="1" max="10" value="3" step="1"
-                 class="roi-slider" aria-label="Número de personas">
-          <div class="roi-slider-limits"><span>1</span><span>10</span></div>
-        </div>
-
-        <div class="roi-input-group">
-          <label class="roi-label" for="roi-horas">
-            Horas semanales por persona
-            <span class="roi-val-badge" id="badge-horas">8 h</span>
-          </label>
-          <input type="range" id="roi-horas" min="2" max="20" value="8" step="1"
-                 class="roi-slider" aria-label="Horas semanales">
-          <div class="roi-slider-limits"><span>2 h</span><span>20 h</span></div>
-        </div>
-
-        <div class="roi-input-group">
-          <label class="roi-label" for="roi-costo">
-            Costo / hora del perfil (MXN)
-            <span class="roi-val-badge" id="badge-costo">$150</span>
-          </label>
-          <input type="range" id="roi-costo" min="80" max="500" value="150" step="10"
-                 class="roi-slider" aria-label="Costo por hora">
-          <div class="roi-slider-limits"><span>$80</span><span>$500</span></div>
-        </div>
-
-      </div>
-
-      <div class="roi-result">
-        <div class="roi-result-label">Costo anual estimado en reportes manuales</div>
-        <div class="roi-result-num" id="roi-result-num">$172,800</div>
-        <div class="roi-result-sub" id="roi-result-sub">Ahorro mensual estimado: $14,400</div>
-        <div class="roi-result-note">
-          Calculado con el 80% del tiempo de preparación de reportes que
-          Power BI elimina automáticamente. Solo en tiempo directo — sin contar
-          decisiones tardías ni oportunidades perdidas.
-        </div>
-        <a href="contacto.html" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block">
-          Calculemos juntos su ROI real →
+      <!-- IA Consulting -->
+      <article class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+        </svg>
+        <h3 class="t-h3">IA Consulting</h3>
+        <p class="t-body">Integra modelos de lenguaje y agentes de IA en tu operación. Automatiza tareas que hoy requieren juicio humano repetitivo.</p>
+        <a href="ia-consulting.html" class="service-link" aria-label="Ver servicio de IA Consulting">
+          Ver servicio
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-      </div>
+      </article>
 
-    </div>
+      <!-- Automatización -->
+      <article class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+        <h3 class="t-h3">Automatización de Procesos</h3>
+        <p class="t-body">Elimina tareas repetitivas y conecta tus sistemas para que el trabajo fluya solo, sin intervención manual constante.</p>
+        <a href="automatizacion.html" class="service-link" aria-label="Ver servicio de Automatización de Procesos">
+          Ver servicio
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
 
-    <div class="hidden-costs-box reveal">
-      <div class="hidden-costs-label">Costos que no aparecen en la calculadora</div>
-      <ul class="hidden-costs-list">
-        <li class="hidden-costs-item">Decisiones tomadas con datos de hace 30 días.</li>
-        <li class="hidden-costs-item">Juntas donde cada área tiene "su versión" de los números.</li>
-        <li class="hidden-costs-item">Problemas no detectados a tiempo por falta de visibilidad.</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════
-     VISIÓN + ANTES VS DESPUÉS — merged
-     ══════════════════════════════════════════════════════════════ -->
-<section class="section-promise" aria-labelledby="promise-title">
-  <div class="section-inner">
-    <p class="section-tag">La Visión</p>
-    <h2 class="section-title" id="promise-title">
-      Ahora imagina lo contrario.
-    </h2>
-
-    <div class="promise-grid">
-
-      <div class="promise-card reveal">
-        <div class="promise-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-        </div>
-        <p class="promise-card-text">
-          Su director de ventas abre su teléfono un lunes por la mañana y ve,
-          en tiempo real, si el trimestre va bien — sin pedirle un reporte a nadie.
-        </p>
-      </div>
-
-      <div class="promise-card reveal reveal-delay-1">
-        <div class="promise-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
-        <p class="promise-card-text">
-          La reunión de dirección empieza con todos mirando el mismo número,
-          en la misma pantalla. Sin discusión. Con tiempo para decidir.
-        </p>
-      </div>
-
-      <div class="promise-card reveal reveal-delay-2">
-        <div class="promise-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
-        </div>
-        <p class="promise-card-text">
-          Un problema en logística se detecta automáticamente en horas.
-          No en semanas, cuando el daño ya es visible en el estado de resultados.
-        </p>
-      </div>
-
-    </div>
-
-    <div style="margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(26,58,92,.12)">
-      <p class="section-tag">Cómo Cambia el Trabajo</p>
-      <h3 style="font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--brand-navy);line-height:1.15;margin-bottom:1.25rem">Antes vs. Después con Power BI</h3>
-
-      <div class="ba-header reveal">
-        <div class="ba-header-before">ANTES</div>
-        <div class="ba-header-vs">VS</div>
-        <div class="ba-header-after">DESPUÉS</div>
-      </div>
-      <div id="ba-rows"></div>
-    </div>
-
-    <div class="promise-footer" style="margin-top:2.5rem">
-      <p class="promise-footer-text">
-        Eso no es tecnología del futuro.<br>
-        <strong>Es lo que implementamos hoy con Power BI.</strong>
-      </p>
-      <a href="servicios.html" class="btn btn-primary">
-        Ver cómo lo hacemos →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════
-     BENTO SERVICIOS
-     ══════════════════════════════════════════════════════════════ -->
-<section class="section-dark" aria-labelledby="svc-bento-title">
-  <div class="section-inner">
-    <p class="section-tag">Lo que hacemos</p>
-    <h2 class="section-title light" id="svc-bento-title">Servicios para cada etapa de su empresa</h2>
-    <p style="color:rgba(255,255,255,.55);max-width:540px;margin:0 auto 2.5rem;text-align:center">
-      Desde el primer dashboard hasta un centro de inteligencia empresarial completo.
-    </p>
-    <div class="bento-services">
-      <div class="ind-card" style="border-color:rgba(6,182,212,.2)">
-        <div class="ind-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div class="ind-card-name">Pulso</div>
-        <div class="ind-card-kpi">Su primer dashboard en 7 días. Para ver sus datos antes de comprometerse con algo más grande.</div>
-        <div class="ind-card-metric" style="color:#06B6D4">$5K–$9K MXN</div>
-      </div>
-      <div class="ind-card" style="border-color:rgba(20,184,166,.2)">
-        <div class="ind-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
-        <div class="ind-card-name">Reporte Express</div>
-        <div class="ind-card-kpi">Dashboard ejecutivo publicado en Power BI Service en 2 semanas. KPIs actualizados automáticamente.</div>
-        <div class="ind-card-metric" style="color:#14B8A6">$15K–$25K MXN</div>
-      </div>
-      <div class="ind-card" style="border-color:rgba(99,102,241,.2)">
-        <div class="ind-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
-        <div class="ind-card-name">Starter</div>
-        <div class="ind-card-kpi">Un área completa transformada con 3–5 reportes interconectados. Ideal para 20–50 empleados.</div>
-        <div class="ind-card-metric" style="color:#6366F1">$40K–$70K MXN</div>
-      </div>
-      <div class="ind-card" style="border-color:rgba(242,169,0,.25)">
-        <div class="ind-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#F2A900" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div>
-        <div class="ind-card-name">Professional</div>
-        <div class="ind-card-kpi">Sistema BI multi-área con modelo estrella, RLS y 3 tracks de capacitación para 50–150 empleados.</div>
-        <div class="ind-card-metric" style="color:#F2A900">$80K–$140K MXN</div>
-      </div>
-      <div class="ind-card" style="border-color:rgba(236,72,153,.2)">
-        <div class="ind-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></div>
-        <div class="ind-card-name">Capacitación</div>
-        <div class="ind-card-kpi">Workshops y bootcamps in-company. Desde 8 horas hasta preparación para certificación PL-300.</div>
-        <div class="ind-card-metric" style="color:#EC4899">A medida</div>
-      </div>
-      <div class="ind-card" style="border-color:rgba(16,185,129,.2)">
-        <div class="ind-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
-        <div class="ind-card-name">Retainer</div>
-        <div class="ind-card-kpi">Contrato mensual de horas para evolución continua de su solución BI ya existente.</div>
-        <div class="ind-card-metric" style="color:#10B981">desde $9K MXN/mes</div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:2rem">
-      <a href="servicios.html" class="btn btn-outline">Ver todos los servicios →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════
-     METODOLOGÍA (4 fases)
-     ══════════════════════════════════════════════════════════════ -->
-<section style="background:#F8FAFC" id="metodologia" aria-labelledby="meto-title">
-  <div class="section-inner">
-    <p class="section-tag">La Solución</p>
-    <h2 class="section-title" id="meto-title">
-      No instalamos un software.<br>Implementamos un sistema de inteligencia.
-    </h2>
-
-    <div class="two-col">
-      <div class="phases reveal">
-        <div class="phase-item">
-          <div class="phase-num">01</div>
-          <div>
-            <div class="phase-title">Diagnóstico</div>
-            <div class="phase-desc">Inventario de fuentes, KPIs y wireframes aprobados por su equipo.</div>
-          </div>
-        </div>
-        <div class="phase-item">
-          <div class="phase-num">02</div>
-          <div>
-            <div class="phase-title">Arquitectura de Datos</div>
-            <div class="phase-desc">Modelo estrella, medidas DAX y validación de calidad de datos.</div>
-          </div>
-        </div>
-        <div class="phase-item">
-          <div class="phase-num">03</div>
-          <div>
-            <div class="phase-title">Desarrollo Iterativo</div>
-            <div class="phase-desc">Dashboards Alpha → Beta → v1.0 con revisiones de avance semanales.</div>
-          </div>
-        </div>
-        <div class="phase-item">
-          <div class="phase-num">04</div>
-          <div>
-            <div class="phase-title">Capacitación y Soporte</div>
-            <div class="phase-desc">3 tracks (Ejecutivos · Analistas · TI) + 4 semanas de soporte post-entrega.</div>
-          </div>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="cases-box">
-          <div class="cases-box-eyebrow">CASOS DE USO</div>
-          <div class="cases">
-            <div class="case-item">
-              <div class="case-tag">Retail / E-commerce</div>
-              <div class="case-desc">Detección de quiebres de inventario en tiempo real → +23% en ventas del trimestre.</div>
-            </div>
-            <div class="case-item">
-              <div class="case-tag">Manufactura</div>
-              <div class="case-desc">Identificación de ineficiencias operativas invisibles → hasta +60% en margen operativo.</div>
-            </div>
-            <div class="case-item">
-              <div class="case-tag">Servicios / SaaS</div>
-              <div class="case-desc">Detección de patrones de cancelación con 60 días de anticipación → −35% en churn.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(26,58,92,.12)">
-      <p style="font-size:.85rem;color:rgba(26,58,92,.45)">
-        ⏱ 12–16 semanas · Gate reviews al final de cada fase · Microsoft Power BI
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════════
-     OBJECIONES
-     ══════════════════════════════════════════════════════════════ -->
-<section class="section-navy" aria-labelledby="obj-title">
-  <div class="section-inner">
-    <p class="section-tag">Preocupaciones Frecuentes</p>
-    <h2 class="section-title light" id="obj-title">El mejor momento para comenzar es hoy</h2>
-
-    <div class="objections reveal">
-
-      <div class="obj-item">
-        <div class="obj-q">
-          <div class="obj-q-badge">Q</div>
-          <div class="obj-q-text">"No es el momento, tenemos muchos proyectos encima."</div>
-          <div class="obj-arrow">▾</div>
-        </div>
-        <div class="obj-a">
-          <div class="a-badge">✓ Respuesta</div>
-          La razón de tener demasiados proyectos encima suele ser la falta de visibilidad para priorizarlos correctamente. Power BI resuelve exactamente ese problema.
-        </div>
-      </div>
-
-      <div class="obj-item">
-        <div class="obj-q">
-          <div class="obj-q-badge">Q</div>
-          <div class="obj-q-text">"Ya tenemos reportes en Excel que nos funcionan."</div>
-          <div class="obj-arrow">▾</div>
-        </div>
-        <div class="obj-a">
-          <div class="a-badge">✓ Respuesta</div>
-          ¿Cuánto tiempo le toma a alguien prepararlos? ¿Y qué pasa con los días entre que se generan y cuando se usan para decidir?
-        </div>
-      </div>
-
-      <div class="obj-item">
-        <div class="obj-q">
-          <div class="obj-q-badge">Q</div>
-          <div class="obj-q-text">"No sé si nuestros datos están listos para esto."</div>
-          <div class="obj-arrow">▾</div>
-        </div>
-        <div class="obj-a">
-          <div class="a-badge">✓ Respuesta</div>
-          Nadie tiene los datos perfectos al empezar. La Fase 1 incluye un diagnóstico honesto de calidad de datos. Es mejor saberlo y trabajarlo.
-        </div>
-      </div>
-
-      <div class="obj-item">
-        <div class="obj-q">
-          <div class="obj-q-badge">Q</div>
-          <div class="obj-q-text">"El precio es alto para nuestro presupuesto."</div>
-          <div class="obj-arrow">▾</div>
-        </div>
-        <div class="obj-a">
-          <div class="a-badge">✓ Respuesta</div>
-          ¿Cuánto está costando hoy no tener esta visibilidad? Podemos comenzar con las 2 áreas de mayor impacto para reducir la inversión inicial.
-        </div>
-      </div>
+      <!-- Business Intelligence -->
+      <article class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+        </svg>
+        <h3 class="t-h3">Business Intelligence</h3>
+        <p class="t-body">Dashboards interactivos en Power BI para que tu equipo tome decisiones basadas en datos reales, no en corazonadas.</p>
+        <a href="business-intelligence.html" class="service-link" aria-label="Ver servicio de Business Intelligence">
+          Ver servicio
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
 
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     CTA FINAL — MODIFICADA
-     ══════════════════════════════════════════════════════════════ -->
-<div class="cta-section" aria-labelledby="cta-title">
-  <div class="cta-inner">
-    <p class="cta-lead">El siguiente paso no cuesta nada.</p>
-    <h2 class="cta-title" id="cta-title">
-      Es una sesión de diagnóstico<br>
-      de <em style="color:#F2A900;font-style:normal">30 minutos</em>, sin costo.
-    </h2>
-    <ul class="cta-checks">
-      <li>Analizamos sus fuentes de datos y KPIs prioritarios.</li>
-      <li>Identificamos las 2 áreas de mayor impacto para su empresa.</li>
-      <li>Al terminar: propuesta formal con alcance y precio cerrado — sin sorpresas.</li>
-    </ul>
-    <div style="text-align:center;margin-top:2rem">
-      <a href="contacto.html" class="btn btn-primary btn-lg">
-        ¿Cuándo agendamos?
-      </a>
+<!-- POR QUÉ YO -->
+<section class="section section-ice">
+  <div class="container">
+    <div class="section-heading">
+      <span class="t-label">¿Por qué trabajar conmigo?</span>
+      <h2 class="t-h2">Sin burocracia. Sin contratos eternos. Sin excusas.</h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-item">
+        <div class="diff-number">01</div>
+        <h3 class="t-h3">Directo y sin intermediarios</h3>
+        <p class="t-body">Trabajas conmigo directamente desde el diagnóstico hasta la entrega. Sin vendedores, sin capas de gestión.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-number">02</div>
+        <h3 class="t-h3">Resultados en semanas</h3>
+        <p class="t-body">Los proyectos están diseñados para entregar valor rápido. No meses de consultoría antes de ver algo funcionando.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-number">03</div>
+        <h3 class="t-h3">Tecnología que puedes mantener</h3>
+        <p class="t-body">Uso herramientas accesibles y capacito a tu equipo para operar y mantener la solución de forma autónoma.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ══════════════════════════════════════════════════════════════
-     FOOTER
-     ══════════════════════════════════════════════════════════════ -->
-<footer>
-  <div class="footer-inner">
+<!-- CTA FINAL -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="cta-band">
+      <span class="t-label">Empecemos</span>
+      <h2 class="t-h2">¿Listo para que la tecnología trabaje para ti?</h2>
+      <p class="t-body">La primera llamada de diagnóstico es gratuita. Platicamos de tu operación y te digo honestamente si puedo ayudarte — sin compromiso.</p>
+      <!-- Update this link to your calendar URL -->
+      <a href="https://wa.me/524622078596?text=Hola%2C%20me%20interesa%20agendar%20una%20llamada%20de%20diagn%C3%B3stico%20gratuita." target="_blank" rel="noopener" class="btn btn-light">Agendar diagnóstico gratuito →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">Data Consulting<span>.</span></div>
-        <div class="footer-tagline">Inteligencia de Negocios · Power BI · Capacitación</div>
+        <div class="footer-brand-name">Data Consulting<span>.</span></div>
+        <div class="footer-tagline">IA · Automatización · Business Intelligence</div>
       </div>
-      <nav class="footer-links" aria-label="Navegación secundaria">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="casos.html">Casos</a>
-        <a href="demo.html">Demo</a>
-        <a href="recursos.html">Recursos</a>
-        <a href="nosotros.html">Quiénes Somos</a>
-        <a href="notebooks.html">Notebooks</a>
-        <a href="contacto.html">Contacto</a>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <a href="ia-consulting.html">IA Consulting</a>
+        <a href="automatizacion.html">Automatización</a>
+        <a href="business-intelligence.html">Business Intelligence</a>
         <a href="aviso-privacidad.html">Aviso de Privacidad</a>
       </nav>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="yr"></span> Iván Aguilera. Todos los derechos reservados.</span>
-      <span>Hecho con ♥ en México</span>
+      <span>© <span class="yr"></span> Iván Aguilera. Todos los derechos reservados.</span>
+      <span>Irapuato, Guanajuato, México</span>
     </div>
   </div>
 </footer>
 
-<a class="floating-cta"
-   href="https://wa.me/524622078596?text=Hola%2C%20vi%20su%20sitio%20y%20tengo%20preguntas%20sobre%20sus%20servicios%20de%20Power%20BI."
-   target="_blank" rel="noopener noreferrer"
-   aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+<!-- WhatsApp float -->
+<a class="wa-float" href="https://wa.me/524622078596?text=Hola%2C%20vi%20su%20sitio%20y%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
 </a>
 
-<script src="js/main.js"></script>
-<script src="js/interactivo.js"></script>
 <script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
-
-<!-- Typewriter del hero -->
-<script>
-(function initHeroTypewriter() {
-  const typeEl  = document.querySelector('.typewriter-text');
-  const wrapper = document.getElementById('heroTypewriter');
-  if (!typeEl || !wrapper) return;
-
-  const phrases = [
-    "Piden el reporte del mes… y llega el martes con datos de la semana pasada.",
-    "Cada área llega a la junta con su propio número.",
-    "Hay un problema en operaciones. Nadie lo vio venir."
-  ];
-
-  let phraseIndex = 0;
-  let charIndex   = 0;
-  let isDeleting  = false;
-  let pauseTimer  = null;
-
-  const SPEED_TYPE   = 42;
-  const SPEED_DELETE = 18;
-  const PAUSE_FULL   = 1800;
-  const PAUSE_DONE   = 600;
-
-  function type() {
-    const current = phrases[phraseIndex];
-
-    if (!isDeleting) {
-      typeEl.textContent = current.slice(0, ++charIndex);
-      if (charIndex === current.length) {
-        if (phraseIndex === phrases.length - 1) {
-          clearTimeout(pauseTimer);
-          pauseTimer = setTimeout(revealHero, PAUSE_FULL);
-          return;
-        }
-        isDeleting = true;
-        pauseTimer = setTimeout(type, PAUSE_DONE);
-        return;
-      }
-    } else {
-      typeEl.textContent = current.slice(0, --charIndex);
-      if (charIndex === 0) {
-        isDeleting = false;
-        phraseIndex++;
-      }
-    }
-    pauseTimer = setTimeout(type, isDeleting ? SPEED_DELETE : SPEED_TYPE);
-  }
-
-  function revealHero() {
-    wrapper.style.transition = 'opacity 0.5s ease';
-    wrapper.style.opacity    = '0';
-
-    setTimeout(() => {
-      wrapper.style.display = 'none';
-      ['hero-title-hidden', 'hero-subtitle-hidden', 'hero-cta-hidden', 'hero-stats-hidden']
-        .forEach((cls, i) => {
-          const el = document.querySelector('.' + cls);
-          if (!el) return;
-          el.classList.remove(cls);
-          el.style.opacity   = '0';
-          el.style.transform = 'translateY(18px)';
-          el.style.transition = `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`;
-          el.getBoundingClientRect();
-          el.style.opacity   = '1';
-          el.style.transform = 'translateY(0)';
-        });
-    }, 520);
-  }
-
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    revealHero();
-  } else {
-    setTimeout(type, 800);
-  }
-})();
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
 </script>
 </body>
 </html>
