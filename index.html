@@ -194,7 +194,8 @@
     if (!canvas) return;
     const ctx  = canvas.getContext('2d');
     const hero = document.querySelector('.hero');
-    const NODES = 44, MAX_D = 148;
+    const isMobile = window.innerWidth < 768;
+    const NODES = isMobile ? 18 : 44, MAX_D = isMobile ? 100 : 148;
 
     canvas.width  = hero.offsetWidth;
     canvas.height = hero.offsetHeight;
@@ -253,8 +254,9 @@
 
   // Typewriter
   (function() {
-    const h1   = document.querySelector('.hero .t-h1');
+    const h1 = document.querySelector('.hero .t-h1');
     if (!h1) return;
+    h1.style.minHeight = h1.offsetHeight + 'px';
     const text = 'Tecnología que trabaja§para tu empresa.';
     h1.innerHTML = '';
     let i = 0;
