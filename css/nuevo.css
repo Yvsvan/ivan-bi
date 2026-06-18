@@ -545,10 +545,12 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
   }
   .nav-links.open li:last-child a { border-bottom: none; }
   .nav-links.open .nav-cta {
-    margin-top: .75rem;
+    margin-top: .5rem;
     width: 100%;
     justify-content: center;
     border-radius: var(--r);
+    font-size: 1rem !important;
+    padding: .75rem 1rem !important;
   }
   .nav-toggle { display: flex; }
 

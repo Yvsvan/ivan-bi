@@ -210,13 +210,13 @@
     const cta = document.getElementById('stickyCta');
     if (!cta) return;
     const hero = document.querySelector('.service-hero');
-    const footer = document.querySelector('.footer');
+    const ctaSection = document.querySelector('.section-dark');
     const waFloat = document.querySelector('.wa-float');
     let visible = false;
     window.addEventListener('scroll', () => {
       const heroGone = hero ? hero.getBoundingClientRect().bottom < -50 : true;
-      const footerFar = footer ? footer.getBoundingClientRect().top > window.innerHeight * 0.6 : true;
-      const show = heroGone && footerFar;
+      const ctaFar = ctaSection ? ctaSection.getBoundingClientRect().top > window.innerHeight * 0.75 : true;
+      const show = heroGone && ctaFar;
       if (show === visible) return;
       visible = show;
       cta.classList.toggle('visible', show);
